@@ -65,8 +65,7 @@ export default function Findings() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '20px 22px',
-          boxShadow: 'var(--shadow-sm)'
+          borderRadius: 'var(--radius-lg)', padding: '20px 22px'
         }}>
           <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 16 }}>
             Correlation with crime count
@@ -95,8 +94,7 @@ export default function Findings() {
 
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '20px 22px',
-          boxShadow: 'var(--shadow-sm)'
+          borderRadius: 'var(--radius-lg)', padding: '20px 22px'
         }}>
           <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 4 }}>
             Fixed-effects regression results
@@ -132,8 +130,7 @@ export default function Findings() {
 
       <div style={{
         background: 'var(--bg)', border: '0.5px solid var(--border)',
-        borderRadius: 'var(--radius-lg)', padding: '20px 22px', marginBottom: 16,
-        boxShadow: 'var(--shadow-sm)'
+        borderRadius: 'var(--radius-lg)', padding: '20px 22px', marginBottom: 16
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
           <div>

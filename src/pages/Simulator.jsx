@@ -107,8 +107,7 @@ export default function Simulator() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '22px 24px',
-          boxShadow: 'var(--shadow-sm)'
+          borderRadius: 'var(--radius-lg)', padding: '22px 24px'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
             <div style={{ fontSize: 13, fontWeight: 500 }}>Adjust variables</div>
@@ -146,7 +145,6 @@ export default function Simulator() {
             background: 'var(--bg)', border: '0.5px solid var(--border)',
             borderRadius: 'var(--radius-lg)', padding: '22px',
             textAlign: 'center', flex: '0 0 auto'
-            , boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 6 }}>
               Predicted annual crime count
@@ -170,8 +168,7 @@ export default function Simulator() {
 
           <div style={{
             background: 'var(--bg)', border: '0.5px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '18px 20px', flex: 1,
-            boxShadow: 'var(--shadow-sm)'
+            borderRadius: 'var(--radius-lg)', padding: '18px 20px', flex: 1
           }}>
             <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 12 }}>Scenario comparison</div>
             <ResponsiveContainer width="100%" height={160}>

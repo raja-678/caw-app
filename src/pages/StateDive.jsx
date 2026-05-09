@@ -24,7 +24,7 @@ function StatCard({ label, value, national, unit = '', higherIsBad = true }) {
   const n = parseFloat(national)
   const worse = higherIsBad ? v > n : v < n
   return (
-    <div style={{ background: 'var(--bg-secondary)', borderRadius: 'var(--radius-md)', padding: '14px 16px', boxShadow: 'var(--shadow-sm)' }}>
+    <div style={{ background: 'var(--bg-secondary)', borderRadius: 'var(--radius-md)', padding: '14px 16px' }}>
       <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginBottom: 4 }}>{label}</div>
       <div style={{ fontSize: 20, fontWeight: 500, color: 'var(--text)' }}>{value}{unit}</div>
       <div style={{ fontSize: 11, marginTop: 4, color: worse ? 'var(--red-600)' : 'var(--green-600)' }}>
@@ -96,8 +96,7 @@ export default function StateDive() {
 
       <div style={{
         background: 'var(--bg)', border: '0.5px solid var(--border)',
-        borderRadius: 'var(--radius-lg)', padding: '20px 24px', marginBottom: 16,
-        boxShadow: 'var(--shadow-sm)'
+        borderRadius: 'var(--radius-lg)', padding: '20px 24px', marginBottom: 16
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
           <div>
@@ -134,8 +133,7 @@ export default function StateDive() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '20px 22px',
-          boxShadow: 'var(--shadow-sm)'
+          borderRadius: 'var(--radius-lg)', padding: '20px 22px'
         }}>
           <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 6 }}>Crime trend 2014-2022</div>
           <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 16 }}>
@@ -156,8 +154,7 @@ export default function StateDive() {
 
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '20px 22px',
-          boxShadow: 'var(--shadow-sm)'
+          borderRadius: 'var(--radius-lg)', padding: '20px 22px'
         }}>
           <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 6 }}>
             Socioeconomic profile vs national average

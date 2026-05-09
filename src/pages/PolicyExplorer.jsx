@@ -121,8 +121,7 @@ export default function PolicyExplorer() {
             <div style={{
               background: 'var(--bg)', border: '0.5px solid var(--border)',
               borderRadius: 'var(--radius-lg)', padding: '32px', textAlign: 'center',
-              color: 'var(--text-secondary)', fontSize: 13,
-              boxShadow: 'var(--shadow-sm)'
+              color: 'var(--text-secondary)', fontSize: 13
             }}>No policies match your filters</div>
           )}
           {filtered.map((p, i) => {
@@ -174,7 +173,6 @@ export default function PolicyExplorer() {
             background: 'var(--bg)', border: '0.5px solid var(--border)',
             borderRadius: 'var(--radius-lg)', padding: '20px 22px',
             position: 'sticky', top: 0, alignSelf: 'start', maxHeight: '80vh', overflowY: 'auto'
-            , boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
               <div style={{ fontSize: 13, fontWeight: 500, flex: 1, lineHeight: 1.4, paddingRight: 12 }}>

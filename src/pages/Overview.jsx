@@ -71,8 +71,7 @@ export default function Overview() {
         {summaryMetrics.map(m => (
           <div key={m.label} style={{
             background: 'var(--bg)', border: '0.5px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '16px 18px',
-            boxShadow: 'var(--shadow-sm)'
+            borderRadius: 'var(--radius-lg)', padding: '16px 18px'
           }}>
             <div style={{ fontSize: 22, fontWeight: 500 }}>{m.value}</div>
             <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 3 }}>{m.label}</div>
@@ -83,8 +82,7 @@ export default function Overview() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 16, marginBottom: 16 }}>
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '20px 22px',
-          boxShadow: 'var(--shadow-sm)'
+          borderRadius: 'var(--radius-lg)', padding: '20px 22px'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
             <div style={{ fontSize: 13, fontWeight: 500 }}>India - click any state to explore</div>
@@ -115,8 +113,7 @@ export default function Overview() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           <div style={{
             background: 'var(--bg)', border: '0.5px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '18px 20px', flex: 1,
-            boxShadow: 'var(--shadow-sm)'
+            borderRadius: 'var(--radius-lg)', padding: '18px 20px', flex: 1
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
               <div style={{ fontSize: 13, fontWeight: 500 }}>State rankings</div>
