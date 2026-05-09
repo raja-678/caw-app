@@ -1,4 +1,6 @@
 ﻿import { useState } from 'react'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts'
+import PageWrapper from '../components/PageWrapper'
 import data from '../data/caw_data.json'
 
 const { regression } = data
@@ -26,72 +28,17 @@ const baselineCrime = predict(
   nationalAvg.infant_mortality
 )
 
-function Slider({ label, value, min, max, step, unit, onChange, higherIsBad, description }) {
-  const atNational = Math.abs(value - nationalAvg[label.toLowerCase().replace(/ /g,'_')]) < step
-  return (
-    <div style={{ marginBottom: 22 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 6 }}>
-        <div>
-          <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--text)' }}>{label}</span>
-          <span style={{ fontSize: 12, color: 'var(--text-secondary)', marginLeft: 8 }}>{description}</span>
-        </div>
-        <span style={{ fontSize: 15, fontWeight: 500, color: 'var(--text)' }}>
-          {typeof value === 'number' ? value.toFixed(step < 1 ? 1 : 0) : value}{unit}
-        </span>
-      </div>
-      <input
-        type="range" min={min} max={max} step={step} value={value}
-        onChange={e => onChange(parseFloat(e.target.value))}
-        style={{ width: '100%' }}
-      />
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
-        <span style={{ fontSize: 11, color: 'var(--text-secondary)' }}>{min}{unit}</span>
-        <span style={{ fontSize: 11, color: 'var(--purple-600)' }}>
-          National avg: {typeof nationalAvg[label.toLowerCase().replace(/ /g,'_')] === 'number'
-            ? nationalAvg[label.toLowerCase().replace(/ /g,'_')].toFixed(1) : '—'}{unit}
-        </span>
-        <span style={{ fontSize: 11, color: 'var(--text-secondary)' }}>{max}{unit}</span>
-      </div>
-    </div>
-  )
-}
-
-function DeltaBadge({ current, baseline }) {
-  const delta = current - baseline
-  const pct = ((delta / baseline) * 100).toFixed(1)
-  const isUp = delta > 0
-  return (
-    <div style={{
-      display: 'inline-flex', alignItems: 'center', gap: 6,
-      padding: '4px 12px', borderRadius: 20,
-      background: isUp ? '#FCEBEB' : '#EAF3DE',
-      color: isUp ? '#A32D2D' : '#3B6D11',
-      fontSize: 13, fontWeight: 500
-    }}>
-      {isUp ? '▲' : '▼'} {Math.abs(pct)}% {isUp ? 'above' : 'below'} national baseline
-    </div>
-  )
-}
-
 const scenarios = [
-  {
-    label: 'Best case — Kerala model',
-    desc: 'High literacy, low early marriage, low infant mortality',
-    policies: 3, literacy: 92, earlyMarriage: 1.4, infantMortality: 12,
-    color: '#3B6D11', bg: '#EAF3DE'
-  },
-  {
-    label: 'National average',
-    desc: 'Current average across all 22 states',
-    policies: 2.44, literacy: 68.4, earlyMarriage: 2.8, infantMortality: 36.2,
-    color: '#534AB7', bg: '#EEEDFE'
-  },
-  {
-    label: 'High deprivation — UP model',
-    desc: 'Low literacy, high early marriage, high infant mortality',
-    policies: 3, literacy: 59, earlyMarriage: 3.8, infantMortality: 49,
-    color: '#A32D2D', bg: '#FCEBEB'
-  },
+  { label: 'Kerala model', desc: 'High literacy, low early marriage', policies: 3, literacy: 92, earlyMarriage: 1.4, infantMortality: 12, color: '#3B6D11', bg: '#EAF3DE' },
+  { label: 'National average', desc: 'Current average across 22 states', policies: 2.44, literacy: 68.4, earlyMarriage: 2.8, infantMortality: 36.2, color: '#534AB7', bg: '#EEEDFE' },
+  { label: 'UP model', desc: 'Low literacy, high early marriage', policies: 3, literacy: 59, earlyMarriage: 3.8, infantMortality: 49, color: '#A32D2D', bg: '#FCEBEB' },
+]
+
+const drivers = [
+  { key: 'early_marriage', label: 'Early marriage', coef: -0.0398, color: '#3B6D11' },
+  { key: 'infant_mortality', label: 'Infant mortality', coef: 0.0042, color: '#E24B4A' },
+  { key: 'literacy', label: 'Female literacy', coef: 0.0175, color: '#854F0B' },
+  { key: 'policies', label: 'Policy count', coef: 0.9553, color: '#534AB7' },
 ]
 
 export default function Simulator() {
@@ -101,125 +48,136 @@ export default function Simulator() {
   const [infantMortality, setInfantMortality] = useState(nationalAvg.infant_mortality)
 
   const predicted = predict(policies, literacy, earlyMarriage, infantMortality)
+  const delta = predicted - baselineCrime
+  const pct = ((delta / baselineCrime) * 100).toFixed(1)
+  const isUp = delta > 0
 
-  const applyScenario = (s) => {
-    setPolicies(s.policies)
-    setLiteracy(s.literacy)
-    setEarlyMarriage(s.earlyMarriage)
-    setInfantMortality(s.infantMortality)
-  }
+  const chartData = [
+    { name: 'Your scenario', crime: predicted, fill: isUp ? '#A32D2D' : '#3B6D11' },
+    { name: 'National avg', crime: baselineCrime, fill: '#534AB7' },
+    { name: 'Kerala model', crime: predict(3, 92, 1.4, 12), fill: '#3B6D11' },
+    { name: 'UP model', crime: predict(3, 59, 3.8, 49), fill: '#E24B4A' },
+  ]
 
-  const reset = () => {
-    setPolicies(nationalAvg.policies)
-    setLiteracy(nationalAvg.literacy)
-    setEarlyMarriage(nationalAvg.early_marriage)
-    setInfantMortality(nationalAvg.infant_mortality)
-  }
+  const sliders = [
+    { label: 'Policies enacted', value: policies, set: setPolicies, min: 0, max: 12, step: 1, nat: nationalAvg.policies, fmt: v => Math.round(v) },
+    { label: 'Female literacy %', value: literacy, set: setLiteracy, min: 40, max: 95, step: 0.5, nat: nationalAvg.literacy, fmt: v => v.toFixed(1) + '%' },
+    { label: 'Early marriage rate', value: earlyMarriage, set: setEarlyMarriage, min: 1, max: 6, step: 0.1, nat: nationalAvg.early_marriage, fmt: v => v.toFixed(1) },
+    { label: 'Infant mortality', value: infantMortality, set: setInfantMortality, min: 10, max: 70, step: 1, nat: nationalAvg.infant_mortality, fmt: v => Math.round(v) },
+  ]
 
   return (
+    <PageWrapper>
     <div>
-      <div style={{ marginBottom: 28 }}>
+      <div style={{ marginBottom: 24 }}>
         <h1 style={{ fontSize: 24, fontWeight: 500, marginBottom: 4 }}>Policy Simulator</h1>
         <p style={{ fontSize: 14, color: 'var(--text-secondary)' }}>
-          Adjust structural indicators to see predicted impact on crime — powered by your actual regression model (R² = 0.983)
+          Adjust structural indicators to predict crime outcomes — powered by fixed-effects regression (R² = 0.983)
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginBottom: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginBottom: 20 }}>
         {scenarios.map(s => (
-          <div
-            key={s.label}
-            onClick={() => applyScenario(s)}
-            style={{
-              background: s.bg, border: '0.5px solid var(--border)',
-              borderRadius: 'var(--radius-lg)', padding: '14px 16px',
-              cursor: 'pointer', transition: 'opacity 0.15s'
-            }}
-            onMouseEnter={e => e.currentTarget.style.opacity = '0.8'}
-            onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-          >
+          <div key={s.label} onClick={() => {
+            setPolicies(s.policies); setLiteracy(s.literacy)
+            setEarlyMarriage(s.earlyMarriage); setInfantMortality(s.infantMortality)
+          }} style={{
+            background: s.bg, border: '0.5px solid var(--border)',
+            borderRadius: 'var(--radius-lg)', padding: '14px 16px', cursor: 'pointer'
+          }}>
             <div style={{ fontSize: 12, fontWeight: 500, color: s.color, marginBottom: 3 }}>{s.label}</div>
-            <div style={{ fontSize: 12, color: 'var(--text-secondary)' }}>{s.desc}</div>
-            <div style={{ fontSize: 11, color: s.color, marginTop: 6 }}>
-              Predicted: ~{predict(s.policies, s.literacy, s.earlyMarriage, s.infantMortality).toLocaleString()}
+            <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 6 }}>{s.desc}</div>
+            <div style={{ fontSize: 13, fontWeight: 500, color: s.color }}>
+              ~{predict(s.policies, s.literacy, s.earlyMarriage, s.infantMortality).toLocaleString()} cases
             </div>
           </div>
         ))}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 16 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '24px 26px'
+          borderRadius: 'var(--radius-lg)', padding: '22px 24px'
         }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
             <div style={{ fontSize: 13, fontWeight: 500 }}>Adjust variables</div>
-            <button
-              onClick={reset}
-              style={{
-                fontSize: 12, padding: '5px 12px', borderRadius: 'var(--radius-md)',
-                border: '0.5px solid var(--border-strong)', background: 'transparent',
-                color: 'var(--text-secondary)'
-              }}
-            >Reset to national avg</button>
+            <button onClick={() => {
+              setPolicies(nationalAvg.policies); setLiteracy(nationalAvg.literacy)
+              setEarlyMarriage(nationalAvg.early_marriage); setInfantMortality(nationalAvg.infant_mortality)
+            }} style={{
+              fontSize: 12, padding: '5px 12px', borderRadius: 'var(--radius-md)',
+              border: '0.5px solid var(--border-strong)', background: 'transparent',
+              color: 'var(--text-secondary)', cursor: 'pointer'
+            }}>Reset</button>
           </div>
 
-          <Slider label="Policies" value={policies} min={0} max={12} step={1} unit=""
-            onChange={setPolicies} higherIsBad={false}
-            description="— policies enacted that year" />
-          <Slider label="Literacy" value={literacy} min={40} max={95} step={0.5} unit="%"
-            onChange={setLiteracy} higherIsBad={false}
-            description="— female literacy rate" />
-          <Slider label="Early_marriage" value={earlyMarriage} min={1} max={6} step={0.1} unit=""
-            onChange={setEarlyMarriage} higherIsBad={true}
-            description="— early marriage rate (strongest predictor)" />
-          <Slider label="Infant_mortality" value={infantMortality} min={10} max={70} step={1} unit=""
-            onChange={setInfantMortality} higherIsBad={true}
-            description="— infant mortality rate" />
+          {sliders.map(sl => (
+            <div key={sl.label} style={{ marginBottom: 20 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+                <span style={{ fontSize: 13, color: 'var(--text)' }}>{sl.label}</span>
+                <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--text)' }}>{sl.fmt(sl.value)}</span>
+              </div>
+              <input type="range" min={sl.min} max={sl.max} step={sl.step} value={sl.value}
+                onChange={e => sl.set(parseFloat(e.target.value))}
+                style={{ width: '100%', accentColor: 'var(--purple-600)' }} />
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 3 }}>
+                <span style={{ fontSize: 10, color: 'var(--text-secondary)' }}>{sl.min}</span>
+                <span style={{ fontSize: 10, color: 'var(--purple-600)' }}>nat. avg: {sl.fmt(sl.nat)}</span>
+                <span style={{ fontSize: 10, color: 'var(--text-secondary)' }}>{sl.max}</span>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           <div style={{
             background: 'var(--bg)', border: '0.5px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '24px',
-            textAlign: 'center'
+            borderRadius: 'var(--radius-lg)', padding: '22px',
+            textAlign: 'center', flex: '0 0 auto'
           }}>
-            <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 8 }}>
+            <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 6 }}>
               Predicted annual crime count
             </div>
-            <div style={{ fontSize: 42, fontWeight: 500, color: 'var(--text)', marginBottom: 8 }}>
+            <div style={{ fontSize: 44, fontWeight: 500, color: 'var(--text)', marginBottom: 8 }}>
               {predicted.toLocaleString()}
             </div>
-            <DeltaBadge current={predicted} baseline={baselineCrime} />
-            <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginTop: 12, lineHeight: 1.6 }}>
-              Based on fixed-effects regression coefficients · Log-linear model · R² = 0.983
+            <div style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              padding: '4px 14px', borderRadius: 20,
+              background: isUp ? '#FCEBEB' : '#EAF3DE',
+              color: isUp ? '#A32D2D' : '#3B6D11',
+              fontSize: 13, fontWeight: 500
+            }}>
+              {isUp ? '▲' : '▼'} {Math.abs(pct)}% {isUp ? 'above' : 'below'} national baseline
+            </div>
+            <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginTop: 10, lineHeight: 1.6 }}>
+              Based on regression coefficients · R² = 0.983
             </div>
           </div>
 
           <div style={{
             background: 'var(--bg)', border: '0.5px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '18px 20px'
+            borderRadius: 'var(--radius-lg)', padding: '18px 20px', flex: 1
           }}>
-            <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 12 }}>What drives this prediction</div>
-            {[
-              { label: 'Early marriage', value: earlyMarriage, coef: regression.early_marriage, direction: 'negative predictor' },
-              { label: 'Infant mortality', value: infantMortality, coef: regression.infant_mortality, direction: 'positive predictor' },
-              { label: 'Female literacy', value: literacy, coef: regression.female_literacy, direction: 'marginal positive' },
-              { label: 'Policy count', value: policies, coef: regression.policy_count, direction: 'reporting effect' },
-            ].map(item => (
-              <div key={item.label} style={{ marginBottom: 10 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
-                  <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>{item.label}</span>
-                  <span style={{ fontSize: 11, color: 'var(--text-secondary)' }}>{item.direction}</span>
-                </div>
-                <div style={{ fontSize: 12, fontWeight: 500, color: item.coef < 0 ? '#3B6D11' : '#A32D2D' }}>
-                  β = {item.coef > 0 ? '+' : ''}{item.coef.toFixed(4)} · current value: {item.value.toFixed(1)}
-                </div>
-              </div>
-            ))}
+            <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 12 }}>Scenario comparison</div>
+            <ResponsiveContainer width="100%" height={160}>
+              <BarChart data={chartData} margin={{ top: 4, right: 8, bottom: 4, left: 8 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
+                <XAxis dataKey="name" tick={{ fontSize: 10, fill: 'var(--text-secondary)' }} />
+                <YAxis tickFormatter={v => (v/1000).toFixed(0)+'k'} tick={{ fontSize: 10, fill: 'var(--text-secondary)' }} />
+                <Tooltip formatter={(v) => [Math.round(v).toLocaleString(), 'Crime']}
+                  contentStyle={{ background: 'var(--bg)', border: '0.5px solid var(--border)', borderRadius: 8, fontSize: 12 }} />
+                <Bar dataKey="crime" radius={[4,4,0,0]}>
+                  {chartData.map((entry, i) => (
+                    <rect key={i} fill={entry.fill} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
           </div>
         </div>
       </div>
     </div>
+    </PageWrapper>
   )
 }
