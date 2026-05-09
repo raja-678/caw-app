@@ -75,8 +75,6 @@ function getColor(state, metricKey) {
   return m.getColor(v)
 }
 
-const INSET_STATES = ['A&N Islands', 'Lakshadweep']
-
 export default function IndiaMap({ metric = 'crime_rate', onStateClick }) {
   const svgRef = useRef(null)
   const [tooltip, setTooltip] = useState(null)
