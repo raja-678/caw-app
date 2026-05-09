@@ -1,87 +1,90 @@
-﻿import PageWrapper from '../components/PageWrapper'
+﻿import { useState } from 'react'
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, ReferenceLine } from 'recharts'
+import PageWrapper from '../components/PageWrapper'
 import data from '../data/caw_data.json'
 
 const { regression, correlations } = data
-
-const findings = [
-  {
-    number: 1,
-    color: '#A32D2D',
-    bg: '#FCEBEB',
-    title: 'Geographic concentration',
-    body: 'Crime against women is heavily concentrated in 4-5 states. Uttar Pradesh alone averages 52,290 cases annually — 55% above the next highest state. National aggregate statistics mask this severe subnational heterogeneity.'
-  },
-  {
-    number: 2,
-    color: '#A32D2D',
-    bg: '#FCEBEB',
-    title: 'Crime rose despite policy activity',
-    body: 'Average state-level crime increased 36% from 2015 to 2022, coinciding with elevated policy activity. There is no visible inflection point following major legislative years like 2013 (Nirbhaya Act), challenging the assumption that policy enactment directly reduces crime.'
-  },
-  {
-    number: 3,
-    color: '#854F0B',
-    bg: '#FAEEDA',
-    title: 'Legislative volume has near-zero correlation with crime',
-    body: 'Policy count — whether same-year, 1-year lagged, or 2-year lagged — shows negligible correlation with state crime outcomes (r = -0.018 maximum). Simply counting policies enacted is not a useful predictor of crime outcomes.'
-  },
-  {
-    number: 4,
-    color: '#3B6D11',
-    bg: '#EAF3DE',
-    title: 'Structural deprivation outperforms policy as predictor',
-    body: 'Infant mortality (r = +0.293) and early marriage rates (r = +0.281) show correlations 15x stronger than policy count. Female literacy (r = -0.218) also substantially outperforms policy count. Structural socioeconomic conditions are more proximate determinants of crime than legislative activity.'
-  },
-  {
-    number: 5,
-    color: '#A32D2D',
-    bg: '#FCEBEB',
-    title: 'The reporting effect — policies increase reported crime',
-    body: 'Fixed-effects panel regression reveals a highly significant positive coefficient on Policy Count (β = 0.955, p < 0.001). Within the same state over time, years with more policies see higher reported crime — not lower. This is interpreted as a reporting effect: landmark legislation raises victim awareness and encourages women to report crimes previously unrecorded.'
-  },
-  {
-    number: 6,
-    color: '#3B6D11',
-    bg: '#EAF3DE',
-    title: 'Early marriage reduction predicts crime reduction',
-    body: 'Early marriage rate carries a significant negative coefficient (β = -0.040, p = 0.022) in the fixed-effects model. States that reduced early marriage rates over time experienced lower crime growth — even after controlling for state baselines. This is the strongest structural policy lever identified.'
-  },
-]
-
 const maxCorr = Math.max(...correlations.map(c => Math.abs(c.r)))
 
+const scatterData = {
+  literacy: data.panel.filter(d => d.literacy).map(d => ({ x: d.literacy, y: d.crime, state: d.state, year: d.year })),
+  early_marriage: data.panel.filter(d => d.early_marriage).map(d => ({ x: d.early_marriage, y: d.crime, state: d.state, year: d.year })),
+  infant_mortality: data.panel.filter(d => d.infant_mortality).map(d => ({ x: d.infant_mortality, y: d.crime, state: d.state, year: d.year })),
+  policies: data.panel.map(d => ({ x: d.policies, y: d.crime, state: d.state, year: d.year })),
+}
+
+const scatterOptions = [
+  { key: 'literacy', label: 'Female Literacy vs Crime', xLabel: 'Female literacy (%)', r: -0.218, color: '#3B6D11' },
+  { key: 'early_marriage', label: 'Early Marriage vs Crime', xLabel: 'Early marriage rate', r: 0.281, color: '#A32D2D' },
+  { key: 'infant_mortality', label: 'Infant Mortality vs Crime', xLabel: 'Infant mortality', r: 0.293, color: '#E24B4A' },
+  { key: 'policies', label: 'Policy Count vs Crime', xLabel: 'Policies enacted', r: -0.018, color: '#534AB7' },
+]
+
+const CustomScatterTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    const d = payload[0].payload
+    return (
+      <div style={{
+        background: 'var(--bg)', border: '0.5px solid var(--border)',
+        borderRadius: 'var(--radius-md)', padding: '8px 12px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.08)', fontSize: 12
+      }}>
+        <div style={{ fontWeight: 500, marginBottom: 3 }}>{d.state} ({d.year})</div>
+        <div style={{ color: 'var(--text-secondary)' }}>x: {typeof d.x === 'number' ? d.x.toFixed(1) : d.x}</div>
+        <div style={{ color: '#A32D2D' }}>Crime: {Math.round(d.y).toLocaleString()}</div>
+      </div>
+    )
+  }
+  return null
+}
+
+const findings = [
+  { number: 1, color: '#A32D2D', bg: '#FCEBEB', title: 'Geographic concentration', body: 'Uttar Pradesh averaged 52,290 cases annually — 55% above Maharashtra. Four states account for a disproportionate share of national crime burden.' },
+  { number: 2, color: '#A32D2D', bg: '#FCEBEB', title: 'Crime rose despite policy activity', body: 'Average state-level crime increased 36% from 2015 to 2022, coinciding with elevated policy activity. No visible inflection point after the Nirbhaya Act (2013).' },
+  { number: 3, color: '#854F0B', bg: '#FAEEDA', title: 'Legislative volume near-zero correlation', body: 'Policy count — same-year, 1-year lagged, or 2-year lagged — shows negligible correlation with crime (r = -0.018 maximum).' },
+  { number: 4, color: '#3B6D11', bg: '#EAF3DE', title: 'Structural deprivation outperforms policy', body: 'Infant mortality (r = +0.293) and early marriage (r = +0.281) are 15x stronger predictors than policy count.' },
+  { number: 5, color: '#A32D2D', bg: '#FCEBEB', title: 'The reporting effect', body: 'Fixed-effects model: Policy Count (p < 0.001, b = 0.955). More policies means more reported crime — awareness drives reporting, not actual crime increase.' },
+  { number: 6, color: '#3B6D11', bg: '#EAF3DE', title: 'Early marriage reduction predicts improvement', body: 'Early marriage carries significant negative coefficient (b = -0.040, p = 0.022) in the fixed-effects model. Strongest structural policy lever identified.' },
+]
+
 export default function Findings() {
+  const [activeScatter, setActiveScatter] = useState('early_marriage')
+  const active = scatterOptions.find(s => s.key === activeScatter)
+
   return (
     <PageWrapper>
     <div>
       <div style={{ marginBottom: 28 }}>
         <h1 style={{ fontSize: 24, fontWeight: 500, marginBottom: 4 }}>Research Findings</h1>
         <p style={{ fontSize: 14, color: 'var(--text-secondary)' }}>
-          Six statistically grounded findings from panel regression across 22 states · 2014–2022
+          Six statistically grounded findings from panel regression across 22 states and 9 years
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
           borderRadius: 'var(--radius-lg)', padding: '20px 22px'
         }}>
-          <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 16 }}>Correlation with crime count</div>
-          {correlations.map(c => {
+          <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 16 }}>
+            Correlation with crime count
+          </div>
+          {correlations.map((c, i) => {
             const abs = Math.abs(c.r)
             const w = (abs / maxCorr * 100)
             const isPos = c.r > 0
             const color = abs > 0.2 ? (isPos ? '#A32D2D' : '#3B6D11') : '#888780'
             return (
-              <div key={c.variable} style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 9 }}>
-                <div style={{ width: 148, fontSize: 12, color: 'var(--text-secondary)', flexShrink: 0 }}>
-                  {c.variable}
+              <div key={c.variable} style={{ marginBottom: 12 }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
+                  <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>{c.variable}</span>
+                  <span style={{ fontSize: 12, fontWeight: 500, color }}>{c.r > 0 ? '+' : ''}{c.r.toFixed(3)}</span>
                 </div>
-                <div style={{ flex: 1, height: 10, background: 'var(--bg-tertiary)', borderRadius: 5, overflow: 'hidden' }}>
-                  <div style={{ width: w + '%', height: '100%', background: color, borderRadius: 5 }} />
-                </div>
-                <div style={{ width: 44, fontSize: 12, fontWeight: 500, textAlign: 'right', color, flexShrink: 0 }}>
-                  {c.r > 0 ? '+' : ''}{c.r.toFixed(3)}
+                <div style={{ height: 10, background: 'var(--bg-tertiary)', borderRadius: 5, overflow: 'hidden' }}>
+                  <div style={{
+                    width: w + '%', height: '100%', background: color, borderRadius: 5,
+                    transition: 'width 0.6s ease'
+                  }} />
                 </div>
               </div>
             )
@@ -92,38 +95,72 @@ export default function Findings() {
           background: 'var(--bg)', border: '0.5px solid var(--border)',
           borderRadius: 'var(--radius-lg)', padding: '20px 22px'
         }}>
-          <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 16 }}>
-            Fixed-effects regression · R² = {regression.r_squared}
+          <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 4 }}>
+            Fixed-effects regression results
+          </div>
+          <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 14 }}>
+            R² = {regression.r_squared} · State + year fixed effects · 176 observations
           </div>
           {[
-            { label: 'Policy count', coef: regression.policy_count, p: '< 0.001', sig: '★★★' },
-            { label: 'Policy lag 1yr', coef: regression.policy_lag1, p: '< 0.001', sig: '★★★' },
-            { label: 'Female literacy', coef: regression.female_literacy, p: '0.075', sig: '★' },
-            { label: 'Infant mortality', coef: regression.infant_mortality, p: '0.067', sig: '★' },
-            { label: 'Early marriage', coef: regression.early_marriage, p: '0.022', sig: '★★' },
+            { label: 'Policy count', coef: regression.policy_count, p: '< 0.001', sig: '★★★', sigColor: '#3B6D11' },
+            { label: 'Policy lag 1yr', coef: regression.policy_lag1, p: '< 0.001', sig: '★★★', sigColor: '#3B6D11' },
+            { label: 'Female literacy', coef: regression.female_literacy, p: '0.075', sig: '★', sigColor: '#185FA5' },
+            { label: 'Infant mortality', coef: regression.infant_mortality, p: '0.067', sig: '★', sigColor: '#185FA5' },
+            { label: 'Early marriage', coef: regression.early_marriage, p: '0.022', sig: '★★', sigColor: '#854F0B' },
           ].map(row => (
             <div key={row.label} style={{
-              display: 'grid', gridTemplateColumns: '1fr 80px 70px 40px',
-              gap: 8, padding: '8px 0',
+              display: 'grid', gridTemplateColumns: '1fr 80px 70px 36px',
+              gap: 8, padding: '9px 0',
               borderBottom: '0.5px solid var(--border)', alignItems: 'center'
             }}>
               <div style={{ fontSize: 13, color: 'var(--text)' }}>{row.label}</div>
-              <div style={{
-                fontSize: 13, fontWeight: 500, textAlign: 'right',
-                color: row.coef > 0 ? '#A32D2D' : '#3B6D11'
-              }}>
+              <div style={{ fontSize: 13, fontWeight: 500, textAlign: 'right', color: row.coef > 0 ? '#A32D2D' : '#3B6D11' }}>
                 {row.coef > 0 ? '+' : ''}{row.coef.toFixed(4)}
               </div>
-              <div style={{ fontSize: 12, color: 'var(--text-secondary)', textAlign: 'right' }}>
-                p = {row.p}
-              </div>
-              <div style={{ fontSize: 12, color: '#534AB7', textAlign: 'right' }}>{row.sig}</div>
+              <div style={{ fontSize: 12, color: 'var(--text-secondary)', textAlign: 'right' }}>p = {row.p}</div>
+              <div style={{ fontSize: 12, color: row.sigColor, textAlign: 'right' }}>{row.sig}</div>
             </div>
           ))}
           <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginTop: 10 }}>
-            State + year fixed effects · 176 observations · ★★★ p&lt;0.01 · ★★ p&lt;0.05 · ★ p&lt;0.1
+            ★★★ p&lt;0.01 · ★★ p&lt;0.05 · ★ p&lt;0.1
           </div>
         </div>
+      </div>
+
+      <div style={{
+        background: 'var(--bg)', border: '0.5px solid var(--border)',
+        borderRadius: 'var(--radius-lg)', padding: '20px 22px', marginBottom: 16
+      }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+          <div>
+            <div style={{ fontSize: 13, fontWeight: 500 }}>{active.label}</div>
+            <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 2 }}>
+              r = {active.r > 0 ? '+' : ''}{active.r} · {Math.abs(active.r) > 0.2 ? 'meaningful correlation' : 'near-zero correlation'}
+            </div>
+          </div>
+          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+            {scatterOptions.map(s => (
+              <button key={s.key} onClick={() => setActiveScatter(s.key)} style={{
+                fontSize: 11, padding: '4px 10px', borderRadius: 20, cursor: 'pointer',
+                border: '0.5px solid ' + (activeScatter === s.key ? s.color : 'var(--border)'),
+                background: activeScatter === s.key ? s.color + '22' : 'transparent',
+                color: activeScatter === s.key ? s.color : 'var(--text-secondary)',
+                fontWeight: activeScatter === s.key ? 500 : 400
+              }}>{s.xLabel}</button>
+            ))}
+          </div>
+        </div>
+        <ResponsiveContainer width="100%" height={260}>
+          <ScatterChart margin={{ top: 4, right: 20, bottom: 20, left: 8 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
+            <XAxis dataKey="x" name={active.xLabel} tick={{ fontSize: 11, fill: 'var(--text-secondary)' }}
+              label={{ value: active.xLabel, position: 'insideBottom', offset: -12, fontSize: 11, fill: 'var(--text-secondary)' }} />
+            <YAxis dataKey="y" name="Crime" tick={{ fontSize: 11, fill: 'var(--text-secondary)' }}
+              tickFormatter={v => (v / 1000).toFixed(0) + 'k'} />
+            <Tooltip content={<CustomScatterTooltip />} />
+            <Scatter data={scatterData[activeScatter]} fill={active.color} fillOpacity={0.5} r={4} />
+          </ScatterChart>
+        </ResponsiveContainer>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
@@ -139,17 +176,12 @@ export default function Findings() {
                 background: f.bg, color: f.color
               }}>Finding {f.number}</span>
             </div>
-            <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--text)', marginBottom: 6 }}>
-              {f.title}
-            </div>
-            <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-              {f.body}
-            </div>
+            <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--text)', marginBottom: 6 }}>{f.title}</div>
+            <div style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7 }}>{f.body}</div>
           </div>
         ))}
       </div>
     </div>
-  </PageWrapper>
+    </PageWrapper>
   )
 }
-
