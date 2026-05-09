@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Criminal Law (Amendment) Act, 2013 (Nirbhaya Act)",
+    "year": 2013,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Criminal Law Reform",
+    "ministry": "Ministry of Home Affairs | Ministry of Law and Justice",
+    "type": "Amendment Act"
+  },
+  {
+    "name": "Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013",
+    "year": 2013,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Workplace Safety and Harassment Prevention",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Act"
+  },
+  {
+    "name": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+    "year": 2015,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Child Protection",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Act"
+  },
+  {
+    "name": "Maternity Benefit (Amendment) Act, 2017",
+    "year": 2017,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Employment Rights and Welfare",
+    "ministry": "Ministry of Labour and Employment",
+    "type": "Amendment Act"
+  },
+  {
+    "name": "Criminal Law (Amendment) Act, 2018",
+    "year": 2018,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Criminal Law Reform",
+    "ministry": "Ministry of Home Affairs | Ministry of Law and Justice",
+    "type": "Amendment Act"
+  },
+  {
+    "name": "Protection of Children from Sexual Offences (Amendment) Act, 2019",
+    "year": 2019,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Child Protection",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Amendment Act"
+  },
+  {
+    "name": "Juvenile Justice (Care and Protection of Children) Amendment Act, 2021",
+    "year": 2021,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Child Protection",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Amendment Act"
+  },
+  {
+    "name": "Prohibition of Child Marriage (Amendment) Bill, 2021",
+    "year": 2021,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Child Marriage Prevention",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Bill"
+  },
+  {
+    "name": "Bharatiya Nagarik Suraksha Sanhita (BNSS), 2023",
+    "year": 2023,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Criminal Procedure Reform",
+    "ministry": "Ministry of Home Affairs",
+    "type": "Act"
+  },
+  {
+    "name": "Bharatiya Nyaya Sanhita (BNS), 2023",
+    "year": 2023,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Criminal Law Reform",
+    "ministry": "Ministry of Home Affairs",
+    "type": "Act"
+  },
+  {
+    "name": "Bharatiya Sakshya Adhiniyam (BSA), 2023",
+    "year": 2023,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Evidence Law Reform",
+    "ministry": "Ministry of Home Affairs",
+    "type": "Act"
+  },
+  {
+    "name": "Constitution (106th Amendment) Act, 2023 - Nari Shakti Vandan Adhiniyam (Women's Reservation Act)",
+    "year": 2023,
+    "category": "A. Legal and Regulatory Framework",
+    "subcategory": "Women's Political Reservation",
+    "ministry": "Ministry of Law and Justice",
+    "type": "Constitutional Amendment Act"
+  },
+  {
+    "name": "Working Women Hostel / Sakhi Niwas (Continued)",
+    "year": 1972,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Infrastructure and Accommodation",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Program"
+  },
+  {
+    "name": "Anti-Human Trafficking Units (AHTUs) (Expanded)",
+    "year": 2007,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Anti-Trafficking and Investigation",
+    "ministry": "Ministry of Home Affairs (State Police)",
+    "type": "Program"
+  },
+  {
+    "name": "Ujjawala Scheme (Continued)",
+    "year": 2007,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Anti-Trafficking",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Scheme"
+  },
+  {
+    "name": "Nirbhaya Fund",
+    "year": 2013,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Funding and Financial Support",
+    "ministry": "Ministry of Finance (DEA) | Ministry of Women and Child Development",
+    "type": "Fund"
+  },
+  {
+    "name": "Beti Bachao Beti Padhao (BBBP)",
+    "year": 2015,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Awareness and Social Mobilization",
+    "ministry": "Ministry of Women and Child Development | Ministry of Health and Family Welfare | Ministry of Education",
+    "type": "Program"
+  },
+  {
+    "name": "One Stop Centre (OSC) Scheme (Sakhi Centres)",
+    "year": 2015,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Rehabilitation and Support Services",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Scheme"
+  },
+  {
+    "name": "Women Helpline (181-WHL) Scheme",
+    "year": 2015,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Emergency Response Services",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Scheme"
+  },
+  {
+    "name": "Central Victim Compensation Fund",
+    "year": 2016,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Victim Compensation",
+    "ministry": "Ministry of Home Affairs",
+    "type": "Fund"
+  },
+  {
+    "name": "Mahila Police Volunteer (MPV) Scheme",
+    "year": 2016,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Community Policing",
+    "ministry": "Ministry of Women and Child Development | Ministry of Home Affairs",
+    "type": "Scheme"
+  },
+  {
+    "name": "Swadhar Greh Scheme (Revised)",
+    "year": 2016,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Rehabilitation and Shelter Services",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Scheme"
+  },
+  {
+    "name": "Mahila Shakti Kendra Scheme",
+    "year": 2017,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Awareness and Support Services",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Scheme"
+  },
+  {
+    "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+    "year": 2017,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Maternal Health and Financial Support",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Program"
+  },
+  {
+    "name": "Emergency Response Support System (ERSS-112)",
+    "year": 2018,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Emergency Response Services",
+    "ministry": "Ministry of Home Affairs",
+    "type": "Program"
+  },
+  {
+    "name": "National Database on Sexual Offenders (NDSO)",
+    "year": 2018,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Investigation and Forensic Support",
+    "ministry": "Ministry of Home Affairs (NCRB)",
+    "type": "Program"
+  },
+  {
+    "name": "Safe City Projects",
+    "year": 2018,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Technology and Infrastructure",
+    "ministry": "Ministry of Home Affairs",
+    "type": "Program"
+  },
+  {
+    "name": "Fast Track Special Courts (FTSCs)",
+    "year": 2019,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Legal Infrastructure",
+    "ministry": "Ministry of Law and Justice (Department of Justice)",
+    "type": "Program"
+  },
+  {
+    "name": "Mission Shakti",
+    "year": 2021,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Umbrella Scheme",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Mission"
+  },
+  {
+    "name": "Nari Adalat",
+    "year": 2021,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Alternative Justice Mechanisms",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Program"
+  },
+  {
+    "name": "Mission Shakti (Umbrella Scheme norms effective from 01.04.2022)",
+    "year": 2022,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Umbrella Scheme",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Scheme"
+  },
+  {
+    "name": "Anganwadi-cum-Cr?he (Palna) Scheme - SOP Release",
+    "year": 2023,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Childcare and Working Women Support",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Program/SOP"
+  },
+  {
+    "name": "Mission Shakti (Continued from 2021)",
+    "year": 2023,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Umbrella Scheme",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Scheme (Continued)"
+  },
+  {
+    "name": "Scheme for Care and Support to Victims under Section 4 & 6 of the Protection of Children from Sexual Offences (POCSO) Act, 2012",
+    "year": 2023,
+    "category": "B. Schemes and Programs",
+    "subcategory": "Child Protection",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Scheme"
+  },
+  {
+    "name": "Dowry Prohibition Act, 1961",
+    "year": 1961,
+    "category": "C. Institutional and Policy Reforms",
+    "subcategory": "Legal Framework (Pre-2013)",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Act"
+  },
+  {
+    "name": "Indecent Representation of Women (Prohibition) Act, 1986",
+    "year": 1986,
+    "category": "C. Institutional and Policy Reforms",
+    "subcategory": "Legal Framework (Pre-2013)",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Act"
+  },
+  {
+    "name": "National Commission for Women Act, 1990",
+    "year": 1990,
+    "category": "C. Institutional and Policy Reforms",
+    "subcategory": "Institutional Framework (Pre-2013)",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Act"
+  },
+  {
+    "name": "Protection of Women from Domestic Violence Act, 2005",
+    "year": 2005,
+    "category": "C. Institutional and Policy Reforms",
+    "subcategory": "Legal Framework (Pre-2013)",
+    "ministry": "Ministry of Women and Child Development | Ministry of Home Affairs",
+    "type": "Act"
+  },
+  {
+    "name": "Protection of Children from Sexual Offences (POCSO) Act, 2012",
+    "year": 2012,
+    "category": "C. Institutional and Policy Reforms",
+    "subcategory": "Legal Framework (Pre-2013)",
+    "ministry": "Ministry of Women and Child Development | Ministry of Home Affairs",
+    "type": "Act"
+  },
+  {
+    "name": "Announcement: Rape Crisis Centres / Fast-tracking Rape Crisis Centres",
+    "year": 2014,
+    "category": "C. Institutional and Policy Reforms",
+    "subcategory": "Program Announcement",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Program"
+  },
+  {
+    "name": "Fast Track Special Courts (FTSCs) Scheme Extension",
+    "year": 2023,
+    "category": "C. Institutional and Policy Reforms",
+    "subcategory": "Legal Infrastructure",
+    "ministry": "Ministry of Law and Justice",
+    "type": "Scheme Extension"
+  },
+  {
+    "name": "Hub for Empowerment of Women (HEW) - Expansion",
+    "year": 2023,
+    "category": "E. Empowerment and Support Programs",
+    "subcategory": "Economic Empowerment",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Initiative/Program"
+  },
+  {
+    "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY) - Portal and Mobile App Launch",
+    "year": 2023,
+    "category": "E. Empowerment and Support Programs",
+    "subcategory": "Maternal Health and Financial Support",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Initiative/Portal"
+  },
+  {
+    "name": "Guide on Gender Inclusive Communication Launch",
+    "year": 2023,
+    "category": "F. Education and Awareness",
+    "subcategory": "Gender Sensitization and Training",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Initiative/Guide"
+  },
+  {
+    "name": "Mission Vatsalya Portal Launch",
+    "year": 2023,
+    "category": "H. Technology and Infrastructure",
+    "subcategory": "Digital Governance",
+    "ministry": "Ministry of Women and Child Development",
+    "type": "Initiative/Portal"
+  }
+]
