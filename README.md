@@ -1,16 +1,31 @@
-# React + Vite
+﻿# CAW India — Crime Against Women Research Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive research dashboard investigating the relationship between policy interventions and crimes against women across 22 Indian states from 2014 to 2022.
 
-Currently, two official plugins are available:
+## Research Summary
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This dashboard accompanies an academic paper examining why some Indian states remain persistently high-risk for crimes against women despite active policy interventions. Key findings include:
 
-## React Compiler
+- Policy count has near-zero bivariate correlation with crime (r = -0.018)
+- Structural indicators — early marriage (r = +0.281) and infant mortality (r = +0.293) — are 15x stronger predictors than policy volume
+- Fixed-effects panel regression reveals a significant reporting effect (p < 0.001) — more policies lead to more reported crime, not more actual crime
+- Reducing early marriage rates is the strongest structural policy lever (p = 0.022)
+- Model R-squared = 0.983 across 22 states and 9 years
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Interactive India choropleth map — switch between crime, literacy, early marriage, infant mortality
+- State deep dive — full socioeconomic profile for any of 22 states
+- Policy explorer — browse all 45 national policies with filters
+- Research findings — correlation analysis and regression results
+- Policy simulator — adjust structural variables and see predicted crime outcomes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Data Sources
+
+- NCRB Crime Data (2014-2022)
+- India Policy Master Dataset (original, hand-coded)
+- SRS Socioeconomic Panel (state-wise indicators)
+
+## License
+
+MIT License — see LICENSE file
