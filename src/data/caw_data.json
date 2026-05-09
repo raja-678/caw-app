@@ -15,7 +15,9 @@
       "Child Mortality": 41.0,
       "early_marriage": 1.9,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 24520,
+      "Crime_Rate_100k": 67.39804241435563
     },
     {
       "state": "Andhra Pradesh",
@@ -32,7 +34,9 @@
       "Child Mortality": 42.0,
       "early_marriage": 2.1,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 24821,
+      "Crime_Rate_100k": 64.32859272390314
     },
     {
       "state": "Andhra Pradesh",
@@ -49,7 +53,9 @@
       "Child Mortality": 38.0,
       "early_marriage": 2.4,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 25125,
+      "Crime_Rate_100k": 65.12238805970149
     },
     {
       "state": "Andhra Pradesh",
@@ -66,7 +72,9 @@
       "Child Mortality": 34.0,
       "early_marriage": 2.3,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 25431,
+      "Crime_Rate_100k": 70.42192599583186
     },
     {
       "state": "Andhra Pradesh",
@@ -83,7 +91,9 @@
       "Child Mortality": 32.0,
       "early_marriage": 2.3,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 25739,
+      "Crime_Rate_100k": 63.86417498737325
     },
     {
       "state": "Andhra Pradesh",
@@ -100,7 +110,9 @@
       "Child Mortality": 30.0,
       "early_marriage": 2.1,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 26050,
+      "Crime_Rate_100k": 68.12284069097889
     },
     {
       "state": "Andhra Pradesh",
@@ -117,7 +129,9 @@
       "Child Mortality": 27.0,
       "early_marriage": 2.7,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 26363,
+      "Crime_Rate_100k": 64.8219094943671
     },
     {
       "state": "Andhra Pradesh",
@@ -134,7 +148,9 @@
       "Child Mortality": 24.0,
       "early_marriage": 1.9,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 26678,
+      "Crime_Rate_100k": 66.54171976909812
     },
     {
       "state": "Andhra Pradesh",
@@ -151,7 +167,9 @@
       "Child Mortality": 22.0,
       "early_marriage": 1.7,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 26995,
+      "Crime_Rate_100k": 94.47305056491942
     },
     {
       "state": "Assam",
@@ -168,7 +186,9 @@
       "Child Mortality": 70.0,
       "early_marriage": 2.2,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 15523,
+      "Crime_Rate_100k": 123.4877278876506
     },
     {
       "state": "Assam",
@@ -185,7 +205,9 @@
       "Child Mortality": 66.0,
       "early_marriage": 2.1,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 15748,
+      "Crime_Rate_100k": 148.36804673609348
     },
     {
       "state": "Assam",
@@ -202,7 +224,9 @@
       "Child Mortality": 57.0,
       "early_marriage": 2.1,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 15975,
+      "Crime_Rate_100k": 130.6353677621283
     },
     {
       "state": "Assam",
@@ -219,7 +243,9 @@
       "Child Mortality": 51.0,
       "early_marriage": 2.2,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 16205,
+      "Crime_Rate_100k": 142.43751928417154
     },
     {
       "state": "Assam",
@@ -236,7 +262,9 @@
       "Child Mortality": 51.0,
       "early_marriage": 2.4,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 16437,
+      "Crime_Rate_100k": 168.44314655959116
     },
     {
       "state": "Assam",
@@ -253,7 +281,9 @@
       "Child Mortality": 45.0,
       "early_marriage": 1.9,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 16672,
+      "Crime_Rate_100k": 180.09237044145874
     },
     {
       "state": "Assam",
@@ -270,7 +300,9 @@
       "Child Mortality": 43.0,
       "early_marriage": 2.6,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 16909,
+      "Crime_Rate_100k": 155.84599917203855
     },
     {
       "state": "Assam",
@@ -287,7 +319,9 @@
       "Child Mortality": 38.0,
       "early_marriage": 3.3,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 17148,
+      "Crime_Rate_100k": 169.38418474457663
     },
     {
       "state": "Assam",
@@ -304,7 +338,9 @@
       "Child Mortality": 35.0,
       "early_marriage": 3.3,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 17390,
+      "Crime_Rate_100k": 81.3571017826337
     },
     {
       "state": "Bihar",
@@ -321,7 +357,9 @@
       "Child Mortality": 58.0,
       "early_marriage": 2.9,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 49338,
+      "Crime_Rate_100k": 31.19907576310349
     },
     {
       "state": "Bihar",
@@ -338,7 +376,9 @@
       "Child Mortality": 54.0,
       "early_marriage": 3.6,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 50300,
+      "Crime_Rate_100k": 27.642147117296226
     },
     {
       "state": "Bihar",
@@ -355,7 +395,9 @@
       "Child Mortality": 51.0,
       "early_marriage": 3.5,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 51276,
+      "Crime_Rate_100k": 26.13308370387706
     },
     {
       "state": "Bihar",
@@ -372,7 +414,9 @@
       "Child Mortality": 43.0,
       "early_marriage": 3.3,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 52267,
+      "Crime_Rate_100k": 28.145866416668262
     },
     {
       "state": "Bihar",
@@ -389,7 +433,9 @@
       "Child Mortality": 39.0,
       "early_marriage": 3.2,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 53273,
+      "Crime_Rate_100k": 31.760929551555197
     },
     {
       "state": "Bihar",
@@ -406,7 +452,9 @@
       "Child Mortality": 37.0,
       "early_marriage": 3.1,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 54295,
+      "Crime_Rate_100k": 34.2333548208859
     },
     {
       "state": "Bihar",
@@ -423,7 +471,9 @@
       "Child Mortality": 33.0,
       "early_marriage": 3.4,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 55332,
+      "Crime_Rate_100k": 27.757897780669417
     },
     {
       "state": "Bihar",
@@ -440,7 +490,9 @@
       "Child Mortality": 33.0,
       "early_marriage": 2.4,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 56385,
+      "Crime_Rate_100k": 31.834707812361447
     },
     {
       "state": "Bihar",
@@ -457,7 +509,9 @@
       "Child Mortality": 31.0,
       "early_marriage": 2.4,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 57454,
+      "Crime_Rate_100k": 35.19685313468166
     },
     {
       "state": "Chhattisgarh",
@@ -474,7 +528,9 @@
       "Child Mortality": 55.0,
       "early_marriage": 1.3,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 12827,
+      "Crime_Rate_100k": 49.12294379044204
     },
     {
       "state": "Chhattisgarh",
@@ -491,7 +547,9 @@
       "Child Mortality": 51.0,
       "early_marriage": 1.6,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 13027,
+      "Crime_Rate_100k": 44.3924157518999
     },
     {
       "state": "Chhattisgarh",
@@ -508,7 +566,9 @@
       "Child Mortality": 48.0,
       "early_marriage": 1.8,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 13230,
+      "Crime_Rate_100k": 44.95086923658352
     },
     {
       "state": "Chhattisgarh",
@@ -525,7 +585,9 @@
       "Child Mortality": 44.0,
       "early_marriage": 2.0,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 13435,
+      "Crime_Rate_100k": 59.51618905842948
     },
     {
       "state": "Chhattisgarh",
@@ -542,7 +604,9 @@
       "Child Mortality": 45.0,
       "early_marriage": 2.0,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 13643,
+      "Crime_Rate_100k": 62.94070219160008
     },
     {
       "state": "Chhattisgarh",
@@ -559,7 +623,9 @@
       "Child Mortality": 42.0,
       "early_marriage": 2.0,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 13854,
+      "Crime_Rate_100k": 55.50021654395842
     },
     {
       "state": "Chhattisgarh",
@@ -576,7 +642,9 @@
       "Child Mortality": 45.0,
       "early_marriage": 0.8,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 14067,
+      "Crime_Rate_100k": 52.49875595365039
     },
     {
       "state": "Chhattisgarh",
@@ -593,7 +661,9 @@
       "Child Mortality": 46.0,
       "early_marriage": 3.3,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 14283,
+      "Crime_Rate_100k": 51.41776937618148
     },
     {
       "state": "Chhattisgarh",
@@ -610,7 +680,9 @@
       "Child Mortality": 40.0,
       "early_marriage": 3.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 14502,
+      "Crime_Rate_100k": 59.94345607502414
     },
     {
       "state": "Delhi",
@@ -627,7 +699,9 @@
       "Child Mortality": 24.0,
       "early_marriage": 1.1,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 8213,
+      "Crime_Rate_100k": 186.5213685620358
     },
     {
       "state": "Delhi",
@@ -644,7 +718,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 0.8,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 8432,
+      "Crime_Rate_100k": 204.24573055028463
     },
     {
       "state": "Delhi",
@@ -661,7 +737,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 1.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 8656,
+      "Crime_Rate_100k": 176.87153419593346
     },
     {
       "state": "Delhi",
@@ -678,7 +756,9 @@
       "Child Mortality": 22.0,
       "early_marriage": 0.4,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 8884,
+      "Crime_Rate_100k": 147.18595227375056
     },
     {
       "state": "Delhi",
@@ -695,7 +775,9 @@
       "Child Mortality": 18.0,
       "early_marriage": 1.3,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 9117,
+      "Crime_Rate_100k": 149.61061752769552
     },
     {
       "state": "Delhi",
@@ -712,7 +794,9 @@
       "Child Mortality": 14.0,
       "early_marriage": 1.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 9355,
+      "Crime_Rate_100k": 143.18546231961517
     },
     {
       "state": "Delhi",
@@ -729,7 +813,9 @@
       "Child Mortality": 13.0,
       "early_marriage": 1.9,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 9597,
+      "Crime_Rate_100k": 105.16828175471504
     },
     {
       "state": "Delhi",
@@ -746,7 +832,9 @@
       "Child Mortality": 13.0,
       "early_marriage": 0.6,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 9844,
+      "Crime_Rate_100k": 145.0325071109305
     },
     {
       "state": "Delhi",
@@ -763,7 +851,9 @@
       "Child Mortality": 15.0,
       "early_marriage": 1.6,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 10096,
+      "Crime_Rate_100k": 141.11529318541997
     },
     {
       "state": "Gujarat",
@@ -780,7 +870,9 @@
       "Child Mortality": 43.0,
       "early_marriage": 2.1,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 30037,
+      "Crime_Rate_100k": 36.135432966008594
     },
     {
       "state": "Gujarat",
@@ -797,7 +889,9 @@
       "Child Mortality": 41.0,
       "early_marriage": 1.7,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 30497,
+      "Crime_Rate_100k": 25.500868937928324
     },
     {
       "state": "Gujarat",
@@ -814,7 +908,9 @@
       "Child Mortality": 33.0,
       "early_marriage": 2.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 30963,
+      "Crime_Rate_100k": 27.55546943125666
     },
     {
       "state": "Gujarat",
@@ -831,7 +927,9 @@
       "Child Mortality": 33.0,
       "early_marriage": 2.1,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 31434,
+      "Crime_Rate_100k": 25.87325825539225
     },
     {
       "state": "Gujarat",
@@ -848,7 +946,9 @@
       "Child Mortality": 29.0,
       "early_marriage": 2.0,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 31911,
+      "Crime_Rate_100k": 26.10071762088308
     },
     {
       "state": "Gujarat",
@@ -865,7 +965,9 @@
       "Child Mortality": 27.0,
       "early_marriage": 1.9,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 32394,
+      "Crime_Rate_100k": 27.16243748842378
     },
     {
       "state": "Gujarat",
@@ -882,7 +984,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 0.4,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 32883,
+      "Crime_Rate_100k": 24.41383085484901
     },
     {
       "state": "Gujarat",
@@ -899,7 +1003,9 @@
       "Child Mortality": 24.0,
       "early_marriage": 2.9,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 33378,
+      "Crime_Rate_100k": 22.01450056923722
     },
     {
       "state": "Gujarat",
@@ -916,7 +1022,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 2.3,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 33879,
+      "Crime_Rate_100k": 22.81944567431152
     },
     {
       "state": "Haryana",
@@ -933,7 +1041,9 @@
       "Child Mortality": 43.0,
       "early_marriage": 1.5,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 12284,
+      "Crime_Rate_100k": 73.34744382937154
     },
     {
       "state": "Haryana",
@@ -950,7 +1060,9 @@
       "Child Mortality": 46.0,
       "early_marriage": 1.8,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 12497,
+      "Crime_Rate_100k": 76.10626550372089
     },
     {
       "state": "Haryana",
@@ -967,7 +1079,9 @@
       "Child Mortality": 42.0,
       "early_marriage": 2.4,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 12713,
+      "Crime_Rate_100k": 77.39321953905451
     },
     {
       "state": "Haryana",
@@ -984,7 +1098,9 @@
       "Child Mortality": 38.0,
       "early_marriage": 1.8,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 12931,
+      "Crime_Rate_100k": 87.92823447529193
     },
     {
       "state": "Haryana",
@@ -1001,7 +1117,9 @@
       "Child Mortality": 36.0,
       "early_marriage": 1.4,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 13152,
+      "Crime_Rate_100k": 108.926399026764
     },
     {
       "state": "Haryana",
@@ -1018,7 +1136,9 @@
       "Child Mortality": 32.0,
       "early_marriage": 1.4,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 13376,
+      "Crime_Rate_100k": 109.77123205741626
     },
     {
       "state": "Haryana",
@@ -1035,7 +1155,9 @@
       "Child Mortality": 33.0,
       "early_marriage": 0.3,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 13603,
+      "Crime_Rate_100k": 95.5671543041976
     },
     {
       "state": "Haryana",
@@ -1052,7 +1174,9 @@
       "Child Mortality": 33.0,
       "early_marriage": 0.6,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 13833,
+      "Crime_Rate_100k": 120.42217884768309
     },
     {
       "state": "Haryana",
@@ -1069,7 +1193,9 @@
       "Child Mortality": 30.0,
       "early_marriage": 0.7,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 14066,
+      "Crime_Rate_100k": 119.03170766387032
     },
     {
       "state": "Himachal Pradesh",
@@ -1086,7 +1212,9 @@
       "Child Mortality": 37.0,
       "early_marriage": 1.0,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 3458,
+      "Crime_Rate_100k": 44.21631000578369
     },
     {
       "state": "Himachal Pradesh",
@@ -1103,7 +1231,9 @@
       "Child Mortality": 32.0,
       "early_marriage": 1.6,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 3490,
+      "Crime_Rate_100k": 37.106017191977074
     },
     {
       "state": "Himachal Pradesh",
@@ -1120,7 +1250,9 @@
       "Child Mortality": 29.0,
       "early_marriage": 1.5,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 3522,
+      "Crime_Rate_100k": 34.6961953435548
     },
     {
       "state": "Himachal Pradesh",
@@ -1137,7 +1269,9 @@
       "Child Mortality": 27.0,
       "early_marriage": 1.5,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 3554,
+      "Crime_Rate_100k": 35.059088351153626
     },
     {
       "state": "Himachal Pradesh",
@@ -1154,7 +1288,9 @@
       "Child Mortality": 25.0,
       "early_marriage": 1.7,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 3587,
+      "Crime_Rate_100k": 45.525508781711736
     },
     {
       "state": "Himachal Pradesh",
@@ -1171,7 +1307,9 @@
       "Child Mortality": 20.0,
       "early_marriage": 1.7,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 3620,
+      "Crime_Rate_100k": 45.193370165745854
     },
     {
       "state": "Himachal Pradesh",
@@ -1188,7 +1326,9 @@
       "Child Mortality": 19.0,
       "early_marriage": 0.4,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 3653,
+      "Crime_Rate_100k": 44.18286339994525
     },
     {
       "state": "Himachal Pradesh",
@@ -1205,7 +1345,9 @@
       "Child Mortality": 19.0,
       "early_marriage": 0.9,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 3687,
+      "Crime_Rate_100k": 43.368592351505285
     },
     {
       "state": "Himachal Pradesh",
@@ -1222,7 +1364,9 @@
       "Child Mortality": 18.0,
       "early_marriage": 0.7,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 3721,
+      "Crime_Rate_100k": 41.6823434560602
     },
     {
       "state": "Jammu & Kashmir",
@@ -1239,7 +1383,9 @@
       "Child Mortality": 37.0,
       "early_marriage": 1.7,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 6097,
+      "Crime_Rate_100k": 54.56782023946203
     },
     {
       "state": "Jammu & Kashmir",
@@ -1256,7 +1402,9 @@
       "Child Mortality": 31.0,
       "early_marriage": 1.5,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 6197,
+      "Crime_Rate_100k": 54.31660480877844
     },
     {
       "state": "Jammu & Kashmir",
@@ -1273,7 +1421,9 @@
       "Child Mortality": 28.0,
       "early_marriage": 1.6,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 6299,
+      "Crime_Rate_100k": 45.2452770280997
     },
     {
       "state": "Jammu & Kashmir",
@@ -1290,7 +1440,9 @@
       "Child Mortality": 24.0,
       "early_marriage": 1.8,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 6402,
+      "Crime_Rate_100k": 48.87535145267104
     },
     {
       "state": "Jammu & Kashmir",
@@ -1307,7 +1459,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 1.5,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 6507,
+      "Crime_Rate_100k": 52.820039956969424
     },
     {
       "state": "Jammu & Kashmir",
@@ -1324,7 +1478,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 1.6,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 6614,
+      "Crime_Rate_100k": 46.40157242213487
     },
     {
       "state": "Jammu & Kashmir",
@@ -1341,7 +1497,9 @@
       "Child Mortality": 19.0,
       "early_marriage": 1.1,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 6723,
+      "Crime_Rate_100k": 50.64703257474342
     },
     {
       "state": "Jammu & Kashmir",
@@ -1358,7 +1516,9 @@
       "Child Mortality": 17.0,
       "early_marriage": 0.1,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 6834,
+      "Crime_Rate_100k": 57.60901375475564
     },
     {
       "state": "Jammu & Kashmir",
@@ -1375,7 +1535,9 @@
       "Child Mortality": 16.0,
       "early_marriage": 1.1,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 6947,
+      "Crime_Rate_100k": 53.49071541672664
     },
     {
       "state": "Jharkhand",
@@ -1392,7 +1554,9 @@
       "Child Mortality": 48.0,
       "early_marriage": 5.4,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 15695,
+      "Crime_Rate_100k": 38.77668047148774
     },
     {
       "state": "Jharkhand",
@@ -1409,7 +1573,9 @@
       "Child Mortality": 44.0,
       "early_marriage": 3.4,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 15951,
+      "Crime_Rate_100k": 41.17610181179863
     },
     {
       "state": "Jharkhand",
@@ -1426,7 +1592,9 @@
       "Child Mortality": 35.0,
       "early_marriage": 4.8,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 16210,
+      "Crime_Rate_100k": 33.639728562615666
     },
     {
       "state": "Jharkhand",
@@ -1443,7 +1611,9 @@
       "Child Mortality": 38.0,
       "early_marriage": 4.2,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 16472,
+      "Crime_Rate_100k": 35.88513841670714
     },
     {
       "state": "Jharkhand",
@@ -1460,7 +1630,9 @@
       "Child Mortality": 39.0,
       "early_marriage": 2.5,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 16737,
+      "Crime_Rate_100k": 42.3194120810181
     },
     {
       "state": "Jharkhand",
@@ -1477,7 +1649,9 @@
       "Child Mortality": 33.0,
       "early_marriage": 2.6,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 17005,
+      "Crime_Rate_100k": 51.51426051161423
     },
     {
       "state": "Jharkhand",
@@ -1494,7 +1668,9 @@
       "Child Mortality": 28.0,
       "early_marriage": 5.8,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 17276,
+      "Crime_Rate_100k": 44.16531604538088
     },
     {
       "state": "Jharkhand",
@@ -1511,7 +1687,9 @@
       "Child Mortality": 31.0,
       "early_marriage": 3.0,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 17550,
+      "Crime_Rate_100k": 46.21082621082621
     },
     {
       "state": "Jharkhand",
@@ -1528,7 +1706,9 @@
       "Child Mortality": 31.0,
       "early_marriage": 5.0,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 17827,
+      "Crime_Rate_100k": 43.06950131822517
     },
     {
       "state": "Karnataka",
@@ -1545,7 +1725,9 @@
       "Child Mortality": 33.0,
       "early_marriage": 1.5,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 29572,
+      "Crime_Rate_100k": 47.35560665494386
     },
     {
       "state": "Karnataka",
@@ -1562,7 +1744,9 @@
       "Child Mortality": 32.0,
       "early_marriage": 1.6,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 30011,
+      "Crime_Rate_100k": 42.56772516743861
     },
     {
       "state": "Karnataka",
@@ -1579,7 +1763,9 @@
       "Child Mortality": 31.0,
       "early_marriage": 1.6,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 30455,
+      "Crime_Rate_100k": 46.39960597603021
     },
     {
       "state": "Karnataka",
@@ -1596,7 +1782,9 @@
       "Child Mortality": 28.0,
       "early_marriage": 1.5,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 30905,
+      "Crime_Rate_100k": 45.5524995955347
     },
     {
       "state": "Karnataka",
@@ -1613,7 +1801,9 @@
       "Child Mortality": 30.0,
       "early_marriage": 1.5,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 31360,
+      "Crime_Rate_100k": 43.09311224489796
     },
     {
       "state": "Karnataka",
@@ -1630,7 +1820,9 @@
       "Child Mortality": 27.0,
       "early_marriage": 1.5,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 31820,
+      "Crime_Rate_100k": 43.45694531741044
     },
     {
       "state": "Karnataka",
@@ -1647,7 +1839,9 @@
       "Child Mortality": 22.0,
       "early_marriage": 1.7,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 32285,
+      "Crime_Rate_100k": 39.27520520365495
     },
     {
       "state": "Karnataka",
@@ -1664,7 +1858,9 @@
       "Child Mortality": 21.0,
       "early_marriage": 1.5,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 32756,
+      "Crime_Rate_100k": 44.16900720478691
     },
     {
       "state": "Karnataka",
@@ -1681,7 +1877,9 @@
       "Child Mortality": 16.0,
       "early_marriage": 1.3,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 33232,
+      "Crime_Rate_100k": 53.60194992778046
     },
     {
       "state": "Kerala",
@@ -1698,7 +1896,9 @@
       "Child Mortality": 15.0,
       "early_marriage": 1.6,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 17359,
+      "Crime_Rate_100k": 65.96578143902299
     },
     {
       "state": "Kerala",
@@ -1715,7 +1915,9 @@
       "Child Mortality": 14.0,
       "early_marriage": 1.3,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 17431,
+      "Crime_Rate_100k": 56.032356147094255
     },
     {
       "state": "Kerala",
@@ -1732,7 +1934,9 @@
       "Child Mortality": 12.0,
       "early_marriage": 1.5,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 17504,
+      "Crime_Rate_100k": 57.324040219378425
     },
     {
       "state": "Kerala",
@@ -1749,7 +1953,9 @@
       "Child Mortality": 11.0,
       "early_marriage": 1.3,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 17577,
+      "Crime_Rate_100k": 62.90607043295216
     },
     {
       "state": "Kerala",
@@ -1766,7 +1972,9 @@
       "Child Mortality": 9.0,
       "early_marriage": 0.9,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 17651,
+      "Crime_Rate_100k": 59.26576397937794
     },
     {
       "state": "Kerala",
@@ -1783,7 +1991,9 @@
       "Child Mortality": 8.0,
       "early_marriage": 0.8,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 17725,
+      "Crime_Rate_100k": 64.6657263751763
     },
     {
       "state": "Kerala",
@@ -1800,7 +2010,9 @@
       "Child Mortality": 4.0,
       "early_marriage": 0.0,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 17800,
+      "Crime_Rate_100k": 56.96067415730337
     },
     {
       "state": "Kerala",
@@ -1817,7 +2029,9 @@
       "Child Mortality": 6.0,
       "early_marriage": 0.2,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 17875,
+      "Crime_Rate_100k": 75.74265734265734
     },
     {
       "state": "Kerala",
@@ -1834,7 +2048,9 @@
       "Child Mortality": 7.0,
       "early_marriage": 0.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 17951,
+      "Crime_Rate_100k": 84.74736783466102
     },
     {
       "state": "Madhya Pradesh",
@@ -1851,7 +2067,9 @@
       "Child Mortality": 70.0,
       "early_marriage": 2.1,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 36360,
+      "Crime_Rate_100k": 79.08690869086908
     },
     {
       "state": "Madhya Pradesh",
@@ -1868,7 +2086,9 @@
       "Child Mortality": 61.0,
       "early_marriage": 2.1,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 36987,
+      "Crime_Rate_100k": 65.51220699164571
     },
     {
       "state": "Madhya Pradesh",
@@ -1885,7 +2105,9 @@
       "Child Mortality": 52.0,
       "early_marriage": 2.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 37623,
+      "Crime_Rate_100k": 70.71206442867395
     },
     {
       "state": "Madhya Pradesh",
@@ -1902,7 +2124,9 @@
       "Child Mortality": 54.0,
       "early_marriage": 2.5,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 38269,
+      "Crime_Rate_100k": 77.83845932739293
     },
     {
       "state": "Madhya Pradesh",
@@ -1919,7 +2143,9 @@
       "Child Mortality": 53.0,
       "early_marriage": 2.5,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 38924,
+      "Crime_Rate_100k": 74.35515363272017
     },
     {
       "state": "Madhya Pradesh",
@@ -1936,7 +2162,9 @@
       "Child Mortality": 49.0,
       "early_marriage": 2.3,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 39589,
+      "Crime_Rate_100k": 69.61529717850918
     },
     {
       "state": "Madhya Pradesh",
@@ -1953,7 +2181,9 @@
       "Child Mortality": 50.0,
       "early_marriage": 2.1,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 40264,
+      "Crime_Rate_100k": 63.67971388833698
     },
     {
       "state": "Madhya Pradesh",
@@ -1970,7 +2200,9 @@
       "Child Mortality": 47.0,
       "early_marriage": 2.2,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 40949,
+      "Crime_Rate_100k": 74.9053700945078
     },
     {
       "state": "Madhya Pradesh",
@@ -1987,7 +2219,9 @@
       "Child Mortality": 48.0,
       "early_marriage": 2.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 41644,
+      "Crime_Rate_100k": 78.67880126788972
     },
     {
       "state": "Maharashtra",
@@ -2004,7 +2238,9 @@
       "Child Mortality": 24.0,
       "early_marriage": 2.4,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 55068,
+      "Crime_Rate_100k": 48.69978935134742
     },
     {
       "state": "Maharashtra",
@@ -2021,7 +2257,9 @@
       "Child Mortality": 26.0,
       "early_marriage": 2.1,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 55887,
+      "Crime_Rate_100k": 55.85556569506325
     },
     {
       "state": "Maharashtra",
@@ -2038,7 +2276,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 2.4,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 56714,
+      "Crime_Rate_100k": 55.34435941742779
     },
     {
       "state": "Maharashtra",
@@ -2055,7 +2295,9 @@
       "Child Mortality": 22.0,
       "early_marriage": 2.2,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 57549,
+      "Crime_Rate_100k": 55.56829831969279
     },
     {
       "state": "Maharashtra",
@@ -2072,7 +2314,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 2.2,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 58392,
+      "Crime_Rate_100k": 60.79086176188518
     },
     {
       "state": "Maharashtra",
@@ -2089,7 +2333,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 2.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 59244,
+      "Crime_Rate_100k": 62.69664438592938
     },
     {
       "state": "Maharashtra",
@@ -2106,7 +2352,9 @@
       "Child Mortality": 19.0,
       "early_marriage": 0.9,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 60103,
+      "Crime_Rate_100k": 53.16539939770062
     },
     {
       "state": "Maharashtra",
@@ -2123,7 +2371,9 @@
       "Child Mortality": 16.0,
       "early_marriage": 0.5,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 60971,
+      "Crime_Rate_100k": 64.82754096209673
     },
     {
       "state": "Maharashtra",
@@ -2140,7 +2390,9 @@
       "Child Mortality": 16.0,
       "early_marriage": 1.1,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 61847,
+      "Crime_Rate_100k": 73.29539023719825
     },
     {
       "state": "Odisha",
@@ -2157,7 +2409,9 @@
       "Child Mortality": 61.0,
       "early_marriage": 2.7,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 20554,
+      "Crime_Rate_100k": 71.28052933735526
     },
     {
       "state": "Odisha",
@@ -2174,7 +2428,9 @@
       "Child Mortality": 55.0,
       "early_marriage": 2.8,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 20786,
+      "Crime_Rate_100k": 82.7480034638699
     },
     {
       "state": "Odisha",
@@ -2191,7 +2447,9 @@
       "Child Mortality": 51.0,
       "early_marriage": 2.8,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 21020,
+      "Crime_Rate_100k": 84.85727878211227
     },
     {
       "state": "Odisha",
@@ -2208,7 +2466,9 @@
       "Child Mortality": 48.0,
       "early_marriage": 2.7,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 21257,
+      "Crime_Rate_100k": 94.54767841181727
     },
     {
       "state": "Odisha",
@@ -2225,7 +2485,9 @@
       "Child Mortality": 43.0,
       "early_marriage": 2.9,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 21496,
+      "Crime_Rate_100k": 94.31522143654634
     },
     {
       "state": "Odisha",
@@ -2242,7 +2504,9 @@
       "Child Mortality": 40.0,
       "early_marriage": 2.8,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 21738,
+      "Crime_Rate_100k": 106.64734566197444
     },
     {
       "state": "Odisha",
@@ -2259,7 +2523,9 @@
       "Child Mortality": 40.0,
       "early_marriage": 3.7,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 21982,
+      "Crime_Rate_100k": 115.95396233281777
     },
     {
       "state": "Odisha",
@@ -2276,7 +2542,9 @@
       "Child Mortality": 39.0,
       "early_marriage": 2.6,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 22229,
+      "Crime_Rate_100k": 141.04098250033738
     },
     {
       "state": "Odisha",
@@ -2293,7 +2561,9 @@
       "Child Mortality": 35.0,
       "early_marriage": 2.8,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 22478,
+      "Crime_Rate_100k": 105.20508942076695
     },
     {
       "state": "Punjab",
@@ -2310,7 +2580,9 @@
       "Child Mortality": 31.0,
       "early_marriage": 1.5,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 13469,
+      "Crime_Rate_100k": 40.69344420521197
     },
     {
       "state": "Punjab",
@@ -2327,7 +2599,9 @@
       "Child Mortality": 26.0,
       "early_marriage": 2.3,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 13620,
+      "Crime_Rate_100k": 39.20704845814978
     },
     {
       "state": "Punjab",
@@ -2344,7 +2618,9 @@
       "Child Mortality": 25.0,
       "early_marriage": 2.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 13773,
+      "Crime_Rate_100k": 37.06527263486532
     },
     {
       "state": "Punjab",
@@ -2361,7 +2637,9 @@
       "Child Mortality": 25.0,
       "early_marriage": 1.9,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 13928,
+      "Crime_Rate_100k": 33.17059161401493
     },
     {
       "state": "Punjab",
@@ -2378,7 +2656,9 @@
       "Child Mortality": 22.0,
       "early_marriage": 1.7,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 14084,
+      "Crime_Rate_100k": 37.64555523998864
     },
     {
       "state": "Punjab",
@@ -2395,7 +2675,9 @@
       "Child Mortality": 21.0,
       "early_marriage": 1.7,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 14242,
+      "Crime_Rate_100k": 41.32846510321584
     },
     {
       "state": "Punjab",
@@ -2412,7 +2694,9 @@
       "Child Mortality": 24.0,
       "early_marriage": 0.6,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 14402,
+      "Crime_Rate_100k": 33.59255658936259
     },
     {
       "state": "Punjab",
@@ -2429,7 +2713,9 @@
       "Child Mortality": 23.0,
       "early_marriage": 0.7,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 14564,
+      "Crime_Rate_100k": 38.87668223015656
     },
     {
       "state": "Punjab",
@@ -2446,7 +2732,9 @@
       "Child Mortality": 19.0,
       "early_marriage": 1.1,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 14728,
+      "Crime_Rate_100k": 37.832699619771866
     },
     {
       "state": "Rajasthan",
@@ -2463,7 +2751,9 @@
       "Child Mortality": 57.0,
       "early_marriage": 2.6,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 34015,
+      "Crime_Rate_100k": 91.77127737762753
     },
     {
       "state": "Rajasthan",
@@ -2480,7 +2770,9 @@
       "Child Mortality": 56.0,
       "early_marriage": 3.0,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 34612,
+      "Crime_Rate_100k": 81.54397318848953
     },
     {
       "state": "Rajasthan",
@@ -2497,7 +2789,9 @@
       "Child Mortality": 49.0,
       "early_marriage": 3.2,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 35216,
+      "Crime_Rate_100k": 77.86801453884597
     },
     {
       "state": "Rajasthan",
@@ -2514,7 +2808,9 @@
       "Child Mortality": 45.0,
       "early_marriage": 3.5,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 35828,
+      "Crime_Rate_100k": 72.54940270179748
     },
     {
       "state": "Rajasthan",
@@ -2531,7 +2827,9 @@
       "Child Mortality": 41.0,
       "early_marriage": 3.5,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 36448,
+      "Crime_Rate_100k": 76.45412642669008
     },
     {
       "state": "Rajasthan",
@@ -2548,7 +2846,9 @@
       "Child Mortality": 41.0,
       "early_marriage": 3.4,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 37076,
+      "Crime_Rate_100k": 112.06710540511382
     },
     {
       "state": "Rajasthan",
@@ -2565,7 +2865,9 @@
       "Child Mortality": 43.0,
       "early_marriage": 2.4,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 37712,
+      "Crime_Rate_100k": 91.57562579550276
     },
     {
       "state": "Rajasthan",
@@ -2582,7 +2884,9 @@
       "Child Mortality": 43.0,
       "early_marriage": 2.4,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 38356,
+      "Crime_Rate_100k": 106.21024090103244
     },
     {
       "state": "Rajasthan",
@@ -2599,7 +2903,9 @@
       "Child Mortality": 37.0,
       "early_marriage": 2.5,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 39008,
+      "Crime_Rate_100k": 115.50963904840032
     },
     {
       "state": "Tamil Nadu",
@@ -2616,7 +2922,9 @@
       "Child Mortality": 21.0,
       "early_marriage": 2.1,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 36901,
+      "Crime_Rate_100k": 17.21904555432102
     },
     {
       "state": "Tamil Nadu",
@@ -2633,7 +2941,9 @@
       "Child Mortality": 21.0,
       "early_marriage": 1.9,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 37220,
+      "Crime_Rate_100k": 15.90274046211714
     },
     {
       "state": "Tamil Nadu",
@@ -2650,7 +2960,9 @@
       "Child Mortality": 19.0,
       "early_marriage": 2.0,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 37541,
+      "Crime_Rate_100k": 11.888335419940866
     },
     {
       "state": "Tamil Nadu",
@@ -2667,7 +2979,9 @@
       "Child Mortality": 19.0,
       "early_marriage": 2.0,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 37864,
+      "Crime_Rate_100k": 14.253644622860763
     },
     {
       "state": "Tamil Nadu",
@@ -2684,7 +2998,9 @@
       "Child Mortality": 17.0,
       "early_marriage": 1.9,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 38190,
+      "Crime_Rate_100k": 15.24482848913328
     },
     {
       "state": "Tamil Nadu",
@@ -2701,7 +3017,9 @@
       "Child Mortality": 15.0,
       "early_marriage": 1.9,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 38518,
+      "Crime_Rate_100k": 15.405784308634924
     },
     {
       "state": "Tamil Nadu",
@@ -2718,7 +3036,9 @@
       "Child Mortality": 13.0,
       "early_marriage": 0.5,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 38848,
+      "Crime_Rate_100k": 17.06651565074135
     },
     {
       "state": "Tamil Nadu",
@@ -2735,7 +3055,9 @@
       "Child Mortality": 14.0,
       "early_marriage": 0.8,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 39180,
+      "Crime_Rate_100k": 21.69729453802961
     },
     {
       "state": "Tamil Nadu",
@@ -2752,7 +3074,9 @@
       "Child Mortality": 12.0,
       "early_marriage": 0.9,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 39515,
+      "Crime_Rate_100k": 23.30001265342275
     },
     {
       "state": "Telangana",
@@ -2769,7 +3093,9 @@
       "Child Mortality": 39.0,
       "early_marriage": 1.9,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 17540,
+      "Crime_Rate_100k": 80.65564424173319
     },
     {
       "state": "Telangana",
@@ -2786,7 +3112,9 @@
       "Child Mortality": 35.0,
       "early_marriage": 1.8,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 17748,
+      "Crime_Rate_100k": 86.91120126211405
     },
     {
       "state": "Telangana",
@@ -2803,7 +3131,9 @@
       "Child Mortality": 34.0,
       "early_marriage": 2.0,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 17958,
+      "Crime_Rate_100k": 85.6108698073282
     },
     {
       "state": "Telangana",
@@ -2820,7 +3150,9 @@
       "Child Mortality": 33.0,
       "early_marriage": 1.9,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 18170,
+      "Crime_Rate_100k": 96.42817831590531
     },
     {
       "state": "Telangana",
@@ -2837,7 +3169,9 @@
       "Child Mortality": 30.0,
       "early_marriage": 1.8,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 18385,
+      "Crime_Rate_100k": 87.17432689692684
     },
     {
       "state": "Telangana",
@@ -2854,7 +3188,9 @@
       "Child Mortality": 26.0,
       "early_marriage": 1.8,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 18602,
+      "Crime_Rate_100k": 98.88184066229438
     },
     {
       "state": "Telangana",
@@ -2871,7 +3207,9 @@
       "Child Mortality": 24.0,
       "early_marriage": 1.1,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 18821,
+      "Crime_Rate_100k": 94.52738961797992
     },
     {
       "state": "Telangana",
@@ -2888,7 +3226,9 @@
       "Child Mortality": 19.0,
       "early_marriage": 0.7,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 19043,
+      "Crime_Rate_100k": 109.56782019639763
     },
     {
       "state": "Telangana",
@@ -2905,7 +3245,9 @@
       "Child Mortality": 21.0,
       "early_marriage": 1.6,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 19267,
+      "Crime_Rate_100k": 114.52743032127472
     },
     {
       "state": "Uttar Pradesh",
@@ -2922,7 +3264,9 @@
       "Child Mortality": 63.0,
       "early_marriage": 2.0,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 99870,
+      "Crime_Rate_100k": 38.96865925703415
     },
     {
       "state": "Uttar Pradesh",
@@ -2939,7 +3283,9 @@
       "Child Mortality": 53.0,
       "early_marriage": 1.9,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 101530,
+      "Crime_Rate_100k": 35.36688663449227
     },
     {
       "state": "Uttar Pradesh",
@@ -2956,7 +3302,9 @@
       "Child Mortality": 49.0,
       "early_marriage": 1.8,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 103218,
+      "Crime_Rate_100k": 47.72617179174175
     },
     {
       "state": "Uttar Pradesh",
@@ -2973,7 +3321,9 @@
       "Child Mortality": 48.0,
       "early_marriage": 2.1,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 104933,
+      "Crime_Rate_100k": 53.37786968827728
     },
     {
       "state": "Uttar Pradesh",
@@ -2990,7 +3340,9 @@
       "Child Mortality": 48.0,
       "early_marriage": 2.1,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 106676,
+      "Crime_Rate_100k": 55.724811578986845
     },
     {
       "state": "Uttar Pradesh",
@@ -3007,7 +3359,9 @@
       "Child Mortality": 50.0,
       "early_marriage": 2.0,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 108447,
+      "Crime_Rate_100k": 55.19101496583585
     },
     {
       "state": "Uttar Pradesh",
@@ -3024,7 +3378,9 @@
       "Child Mortality": 44.0,
       "early_marriage": 3.3,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 110246,
+      "Crime_Rate_100k": 44.79527601908459
     },
     {
       "state": "Uttar Pradesh",
@@ -3041,7 +3397,9 @@
       "Child Mortality": 42.0,
       "early_marriage": 2.3,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 112073,
+      "Crime_Rate_100k": 50.04149081402301
     },
     {
       "state": "Uttar Pradesh",
@@ -3058,7 +3416,9 @@
       "Child Mortality": 42.0,
       "early_marriage": 1.9,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 113929,
+      "Crime_Rate_100k": 57.70523747246092
     },
     {
       "state": "Uttarakhand",
@@ -3075,7 +3435,9 @@
       "Child Mortality": 40.0,
       "early_marriage": 1.4,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 5034,
+      "Crime_Rate_100k": 28.06912991656734
     },
     {
       "state": "Uttarakhand",
@@ -3092,7 +3454,9 @@
       "Child Mortality": 41.0,
       "early_marriage": 1.5,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 5105,
+      "Crime_Rate_100k": 28.697355533790404
     },
     {
       "state": "Uttarakhand",
@@ -3109,7 +3473,9 @@
       "Child Mortality": 45.0,
       "early_marriage": 1.7,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 5177,
+      "Crime_Rate_100k": 30.674135599768203
     },
     {
       "state": "Uttarakhand",
@@ -3126,7 +3492,9 @@
       "Child Mortality": 32.0,
       "early_marriage": 1.6,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 5250,
+      "Crime_Rate_100k": 37.02857142857143
     },
     {
       "state": "Uttarakhand",
@@ -3143,7 +3511,9 @@
       "Child Mortality": 32.0,
       "early_marriage": 1.7,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 5324,
+      "Crime_Rate_100k": 52.91134485349362
     },
     {
       "state": "Uttarakhand",
@@ -3160,7 +3530,9 @@
       "Child Mortality": 31.0,
       "early_marriage": 1.6,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 5399,
+      "Crime_Rate_100k": 47.06427116132617
     },
     {
       "state": "Uttarakhand",
@@ -3177,7 +3549,9 @@
       "Child Mortality": 26.0,
       "early_marriage": 0.7,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 5475,
+      "Crime_Rate_100k": 51.98173515981736
     },
     {
       "state": "Uttarakhand",
@@ -3194,7 +3568,9 @@
       "Child Mortality": 26.0,
       "early_marriage": 3.2,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 5552,
+      "Crime_Rate_100k": 61.79755043227666
     },
     {
       "state": "Uttarakhand",
@@ -3211,7 +3587,9 @@
       "Child Mortality": 24.0,
       "early_marriage": 1.9,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 5630,
+      "Crime_Rate_100k": 77.03374777975132
     },
     {
       "state": "West Bengal",
@@ -3228,7 +3606,9 @@
       "Child Mortality": 32.0,
       "early_marriage": 3.4,
       "policy_lag1": null,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 44605,
+      "Crime_Rate_100k": 86.1428091021186
     },
     {
       "state": "West Bengal",
@@ -3245,7 +3625,9 @@
       "Child Mortality": 31.0,
       "early_marriage": 3.7,
       "policy_lag1": 1.0,
-      "policy_lag2": null
+      "policy_lag2": null,
+      "Female_Pop_000s": 45115,
+      "Crime_Rate_100k": 73.85126897927519
     },
     {
       "state": "West Bengal",
@@ -3262,7 +3644,9 @@
       "Child Mortality": 28.0,
       "early_marriage": 3.7,
       "policy_lag1": 4.0,
-      "policy_lag2": 1.0
+      "policy_lag2": 1.0,
+      "Female_Pop_000s": 45630,
+      "Crime_Rate_100k": 71.25356125356124
     },
     {
       "state": "West Bengal",
@@ -3279,7 +3663,9 @@
       "Child Mortality": 27.0,
       "early_marriage": 3.6,
       "policy_lag1": 3.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 46150,
+      "Crime_Rate_100k": 67.15492957746478
     },
     {
       "state": "West Bengal",
@@ -3296,7 +3682,9 @@
       "Child Mortality": 26.0,
       "early_marriage": 3.7,
       "policy_lag1": 3.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 46675,
+      "Crime_Rate_100k": 65.11837171933583
     },
     {
       "state": "West Bengal",
@@ -3313,7 +3701,9 @@
       "Child Mortality": 24.0,
       "early_marriage": 3.7,
       "policy_lag1": 4.0,
-      "policy_lag2": 3.0
+      "policy_lag2": 3.0,
+      "Female_Pop_000s": 47205,
+      "Crime_Rate_100k": 63.25389259612329
     },
     {
       "state": "West Bengal",
@@ -3330,7 +3720,9 @@
       "Child Mortality": 22.0,
       "early_marriage": 4.7,
       "policy_lag1": 2.0,
-      "policy_lag2": 4.0
+      "policy_lag2": 4.0,
+      "Female_Pop_000s": 47740,
+      "Crime_Rate_100k": 76.32802681189777
     },
     {
       "state": "West Bengal",
@@ -3347,7 +3739,9 @@
       "Child Mortality": 19.0,
       "early_marriage": 6.5,
       "policy_lag1": 0.0,
-      "policy_lag2": 2.0
+      "policy_lag2": 2.0,
+      "Female_Pop_000s": 48280,
+      "Crime_Rate_100k": 74.32477216238608
     },
     {
       "state": "West Bengal",
@@ -3364,13 +3758,16 @@
       "Child Mortality": 18.0,
       "early_marriage": 6.5,
       "policy_lag1": 4.0,
-      "policy_lag2": 0.0
+      "policy_lag2": 0.0,
+      "Female_Pop_000s": 48825,
+      "Crime_Rate_100k": 71.1479774705581
     }
   ],
   "state_averages": [
     {
       "state": "Andhra Pradesh",
       "avg_crime": 17921.3,
+      "avg_crime_rate": 69.45496052228098,
       "avg_literacy": 85.8111111111111,
       "avg_early_marriage": 2.1555555555555554,
       "avg_infant_mortality": 27.77777777777778,
@@ -3379,6 +3776,7 @@
     {
       "state": "Assam",
       "avg_crime": 23749.2,
+      "avg_crime_rate": 144.45016270781585,
       "avg_literacy": 89.60000000000001,
       "avg_early_marriage": 2.4555555555555557,
       "avg_infant_mortality": 38.77777777777778,
@@ -3387,6 +3785,7 @@
     {
       "state": "Bihar",
       "avg_crime": 16271.8,
+      "avg_crime_rate": 30.43376845567763,
       "avg_literacy": 75.23333333333333,
       "avg_early_marriage": 3.0888888888888886,
       "avg_infant_mortality": 37.44444444444444,
@@ -3395,6 +3794,7 @@
     {
       "state": "Chhattisgarh",
       "avg_crime": 7302.8,
+      "avg_crime_rate": 53.36481310864105,
       "avg_literacy": 84.0,
       "avg_early_marriage": 2.0,
       "avg_infant_mortality": 36.333333333333336,
@@ -3403,6 +3803,7 @@
     {
       "state": "Delhi",
       "avg_crime": 14064.3,
+      "avg_crime_rate": 155.43741638670897,
       "avg_literacy": 91.87777777777778,
       "avg_early_marriage": 1.1222222222222222,
       "avg_infant_mortality": 14.666666666666666,
@@ -3411,6 +3812,7 @@
     {
       "state": "Gujarat",
       "avg_crime": 8392.3,
+      "avg_crime_rate": 26.397329088698935,
       "avg_literacy": 85.83333333333334,
       "avg_early_marriage": 1.9555555555555557,
       "avg_infant_mortality": 25.333333333333332,
@@ -3419,6 +3821,7 @@
     {
       "state": "Haryana",
       "avg_crime": 12793.3,
+      "avg_crime_rate": 96.49931502748558,
       "avg_literacy": 88.45555555555555,
       "avg_early_marriage": 1.322222222222222,
       "avg_infant_mortality": 29.77777777777778,
@@ -3427,6 +3830,7 @@
     {
       "state": "Himachal Pradesh",
       "avg_crime": 1480.6,
+      "avg_crime_rate": 41.225587671937504,
       "avg_literacy": 98.49999999999999,
       "avg_early_marriage": 1.2222222222222223,
       "avg_infant_mortality": 19.77777777777778,
@@ -3435,6 +3839,7 @@
     {
       "state": "Jammu & Kashmir",
       "avg_crime": 3359.6,
+      "avg_crime_rate": 51.55260307270458,
       "avg_literacy": 86.17777777777779,
       "avg_early_marriage": 1.3333333333333333,
       "avg_infant_mortality": 22.11111111111111,
@@ -3443,6 +3848,7 @@
     {
       "state": "Jharkhand",
       "avg_crime": 7031.0,
+      "avg_crime_rate": 41.86188504774153,
       "avg_literacy": 77.23333333333333,
       "avg_early_marriage": 4.077777777777778,
       "avg_infant_mortality": 28.555555555555557,
@@ -3451,6 +3857,7 @@
     {
       "state": "Karnataka",
       "avg_crime": 14143.4,
+      "avg_crime_rate": 45.0524063658309,
       "avg_literacy": 94.07777777777778,
       "avg_early_marriage": 1.5222222222222221,
       "avg_infant_mortality": 23.11111111111111,
@@ -3459,6 +3866,7 @@
     {
       "state": "Kerala",
       "avg_crime": 11458.1,
+      "avg_crime_rate": 64.84560421418044,
       "avg_literacy": 99.4,
       "avg_early_marriage": 0.8666666666666667,
       "avg_infant_mortality": 9.444444444444445,
@@ -3467,6 +3875,7 @@
     {
       "state": "Madhya Pradesh",
       "avg_crime": 28328.8,
+      "avg_crime_rate": 72.70933061117174,
       "avg_literacy": 82.32222222222221,
       "avg_early_marriage": 2.2444444444444445,
       "avg_infant_mortality": 40.44444444444444,
@@ -3475,6 +3884,7 @@
     {
       "state": "Maharashtra",
       "avg_crime": 34539.2,
+      "avg_crime_rate": 58.91598328092683,
       "avg_literacy": 95.92222222222223,
       "avg_early_marriage": 1.7777777777777777,
       "avg_infant_mortality": 18.0,
@@ -3483,6 +3893,7 @@
     {
       "state": "Odisha",
       "avg_crime": 21525.8,
+      "avg_crime_rate": 99.62178792751085,
       "avg_literacy": 89.0111111111111,
       "avg_early_marriage": 2.8666666666666667,
       "avg_infant_mortality": 40.22222222222222,
@@ -3491,6 +3902,7 @@
     {
       "state": "Punjab",
       "avg_crime": 5311.8,
+      "avg_crime_rate": 37.712479521637505,
       "avg_literacy": 91.23333333333332,
       "avg_early_marriage": 1.522222222222222,
       "avg_infant_mortality": 20.555555555555557,
@@ -3499,6 +3911,7 @@
     {
       "state": "Rajasthan",
       "avg_crime": 33622.4,
+      "avg_crime_rate": 91.72771170927778,
       "avg_literacy": 78.71111111111112,
       "avg_early_marriage": 2.944444444444444,
       "avg_infant_mortality": 38.666666666666664,
@@ -3507,6 +3920,7 @@
     {
       "state": "Tamil Nadu",
       "avg_crime": 6469.7,
+      "avg_crime_rate": 16.886466855466853,
       "avg_literacy": 96.42222222222222,
       "avg_early_marriage": 1.5555555555555558,
       "avg_infant_mortality": 14.777777777777779,
@@ -3515,6 +3929,7 @@
     {
       "state": "Telangana",
       "avg_crime": 17512.2,
+      "avg_crime_rate": 94.92052236910601,
       "avg_literacy": 84.27777777777777,
       "avg_early_marriage": 1.6222222222222222,
       "avg_infant_mortality": 26.0,
@@ -3523,6 +3938,7 @@
     {
       "state": "Uttar Pradesh",
       "avg_crime": 52289.8,
+      "avg_crime_rate": 48.7663798024374,
       "avg_literacy": 79.27777777777777,
       "avg_early_marriage": 2.1555555555555554,
       "avg_infant_mortality": 42.666666666666664,
@@ -3531,6 +3947,7 @@
     {
       "state": "Uttarakhand",
       "avg_crime": 2486.9,
+      "avg_crime_rate": 46.1397602072625,
       "avg_literacy": 90.09999999999998,
       "avg_early_marriage": 1.7,
       "avg_infant_mortality": 29.666666666666668,
@@ -3539,6 +3956,7 @@
     {
       "state": "West Bengal",
       "avg_crime": 33617.9,
+      "avg_crime_rate": 72.06395663030233,
       "avg_literacy": 89.65555555555555,
       "avg_early_marriage": 4.388888888888889,
       "avg_infant_mortality": 22.444444444444443,
@@ -3549,57 +3967,86 @@
     {
       "year": 2014,
       "avg_crime": 15234.0,
+      "avg_crime_rate": 63.6673395935388,
       "total_policies": 1
     },
     {
       "year": 2015,
       "avg_crime": 14797.5,
+      "avg_crime_rate": 63.06268741441913,
       "total_policies": 4
     },
     {
       "year": 2016,
       "avg_crime": 15250.2,
+      "avg_crime_rate": 60.86212921511271,
       "total_policies": 3
     },
     {
       "year": 2017,
       "avg_crime": 16183.7,
+      "avg_crime_rate": 63.259305364379536,
       "total_policies": 3
     },
     {
       "year": 2018,
       "avg_crime": 17020.0,
+      "avg_crime_rate": 67.01841484296109,
       "total_policies": 4
     },
     {
       "year": 2019,
       "avg_crime": 18253.8,
+      "avg_crime_rate": 70.06597502653527,
       "total_policies": 2
     },
     {
       "year": 2020,
       "avg_crime": 16741.9,
+      "avg_crime_rate": 63.8168691799435,
       "total_policies": 0
     },
     {
       "year": 2021,
       "avg_crime": 19306.5,
+      "avg_crime_rate": 73.50170045117473,
       "total_policies": 4
     },
     {
       "year": 2022,
       "avg_crime": 20078.3,
+      "avg_crime_rate": 72.03476415117315,
       "total_policies": 1
     }
   ],
-  "regression": {
+  "regression_count": {
     "policy_count": 0.9553,
     "policy_lag1": 0.737,
     "female_literacy": 0.0175,
     "infant_mortality": 0.0042,
     "early_marriage": -0.0398,
     "intercept": 9.4033,
-    "r_squared": 0.983
+    "r_squared": 0.983,
+    "outcome": "Log(Crime Count)"
+  },
+  "regression_rate": {
+    "policy_count": 0.3342,
+    "policy_lag1": 0.2701,
+    "female_literacy": 0.0146,
+    "infant_mortality": 0.0043,
+    "early_marriage": -0.0414,
+    "intercept": 1.2716,
+    "r_squared": 0.95,
+    "outcome": "Log(Crime Rate per 100k women)"
+  },
+  "regression": {
+    "policy_count": 0.3342,
+    "policy_lag1": 0.2701,
+    "female_literacy": 0.0146,
+    "infant_mortality": 0.0043,
+    "early_marriage": -0.0414,
+    "intercept": 1.2716,
+    "r_squared": 0.95
   },
   "correlations": [
     {
