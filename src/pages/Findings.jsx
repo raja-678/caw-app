@@ -1,4 +1,5 @@
-﻿import data from '../data/caw_data.json'
+﻿import PageWrapper from '../components/PageWrapper'
+import data from '../data/caw_data.json'
 
 const { regression, correlations } = data
 
@@ -51,6 +52,7 @@ const maxCorr = Math.max(...correlations.map(c => Math.abs(c.r)))
 
 export default function Findings() {
   return (
+    <PageWrapper>
     <div>
       <div style={{ marginBottom: 28 }}>
         <h1 style={{ fontSize: 24, fontWeight: 500, marginBottom: 4 }}>Research Findings</h1>
@@ -147,5 +149,7 @@ export default function Findings() {
         ))}
       </div>
     </div>
+  </PageWrapper>
   )
 }
+
