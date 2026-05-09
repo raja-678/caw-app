@@ -4,6 +4,15 @@ import IndiaMap from '../components/IndiaMap'
 import PageWrapper from '../components/PageWrapper'
 import data from '../data/caw_data.json'
 
+const vars = {
+  purple: 'var(--purple-600)',
+  purpleBg: 'var(--purple-50)',
+  red: 'var(--red-600)',
+  redBg: 'var(--red-50)',
+  green: 'var(--green-600)',
+  greenBg: 'var(--green-50)',
+}
+
 const metrics = [
   { key: 'crime', label: 'Crime count' },
   { key: 'crime_rate', label: 'Crime rate' },
@@ -13,11 +22,11 @@ const metrics = [
 ]
 
 const legend = {
-  crime: { colors: ['#FCEBEB','#F09595','#E24B4A','#A32D2D'], labels: ['< 5k','5k-15k','15k-40k','> 40k'] },
-  crime_rate: { colors: ['#FCEBEB','#F09595','#E24B4A','#A32D2D'], labels: ['< 50','50-100','100-150','> 150'] },
-  literacy: { colors: ['#A32D2D','#F09595','#E24B4A','#FCEBEB'], labels: ['< 60%','60-70%','70-80%','> 80%'] },
-  early_marriage: { colors: ['#EAF3DE','#FAEEDA','#F09595','#A32D2D'], labels: ['< 2','2-3','3-4','> 4'] },
-  infant_mortality: { colors: ['#EAF3DE','#FAEEDA','#F09595','#A32D2D'], labels: ['< 25','25-35','35-45','> 45'] },
+  crime: { colors: ['var(--red-50)','var(--red-200)','var(--red-400)','var(--red-600)'], labels: ['< 5k','5k-15k','15k-40k','> 40k'] },
+  crime_rate: { colors: ['var(--red-50)','var(--red-200)','var(--red-400)','var(--red-600)'], labels: ['< 50','50-100','100-150','> 150'] },
+  literacy: { colors: ['var(--red-600)','var(--red-200)','var(--red-400)','var(--red-50)'], labels: ['< 60%','60-70%','70-80%','> 80%'] },
+  early_marriage: { colors: ['var(--green-50)','var(--amber-50)','var(--red-200)','var(--red-600)'], labels: ['< 2','2-3','3-4','> 4'] },
+  infant_mortality: { colors: ['var(--green-50)','var(--amber-50)','var(--red-200)','var(--red-600)'], labels: ['< 25','25-35','35-45','> 45'] },
 }
 
 const topByRate = [...data.state_averages]
@@ -43,6 +52,7 @@ export default function Overview() {
   const [metric, setMetric] = useState('crime_rate')
   const [rankMode, setRankMode] = useState('rate')
   const navigate = useNavigate()
+  const [hover, setHover] = useState(null)
 
   const topStates = rankMode === 'rate' ? topByRate : topByCount
   const maxVal = rankMode === 'rate' ? maxRate : maxCount
@@ -61,7 +71,8 @@ export default function Overview() {
         {summaryMetrics.map(m => (
           <div key={m.label} style={{
             background: 'var(--bg)', border: '0.5px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '16px 18px'
+            borderRadius: 'var(--radius-lg)', padding: '16px 18px',
+            boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{ fontSize: 22, fontWeight: 500 }}>{m.value}</div>
             <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 3 }}>{m.label}</div>
@@ -72,7 +83,8 @@ export default function Overview() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: 16, marginBottom: 16 }}>
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '20px 22px'
+          borderRadius: 'var(--radius-lg)', padding: '20px 22px',
+          boxShadow: 'var(--shadow-sm)'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
             <div style={{ fontSize: 13, fontWeight: 500 }}>India - click any state to explore</div>
@@ -80,10 +92,11 @@ export default function Overview() {
               {metrics.map(m => (
                 <button key={m.key} onClick={() => setMetric(m.key)} style={{
                   fontSize: 11, padding: '4px 10px', borderRadius: 20, cursor: 'pointer',
-                  border: '0.5px solid ' + (metric === m.key ? '#534AB7' : 'rgba(0,0,0,0.12)'),
-                  background: metric === m.key ? '#EEEDFE' : 'transparent',
-                  color: metric === m.key ? '#534AB7' : '#6b6b6b',
-                  fontWeight: metric === m.key ? 500 : 400
+                  border: '0.5px solid ' + (metric === m.key ? vars.purple : 'var(--border)'),
+                  background: metric === m.key ? vars.purpleBg : 'transparent',
+                  color: metric === m.key ? vars.purple : 'var(--text-secondary)',
+                  fontWeight: metric === m.key ? 500 : 400,
+                  transition: 'var(--transition)'
                 }}>{m.label}</button>
               ))}
             </div>
@@ -93,7 +106,7 @@ export default function Overview() {
             {(legend[metric] || legend.crime).colors.map((c, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                 <div style={{ width: 12, height: 12, borderRadius: 2, background: c, flexShrink: 0 }} />
-                <span style={{ fontSize: 11, color: '#6b6b6b' }}>{(legend[metric] || legend.crime).labels[i]}</span>
+                <span style={{ fontSize: 11, color: 'var(--text-secondary)' }}>{(legend[metric] || legend.crime).labels[i]}</span>
               </div>
             ))}
           </div>
@@ -102,22 +115,25 @@ export default function Overview() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           <div style={{
             background: 'var(--bg)', border: '0.5px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '18px 20px', flex: 1
+            borderRadius: 'var(--radius-lg)', padding: '18px 20px', flex: 1,
+            boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
               <div style={{ fontSize: 13, fontWeight: 500 }}>State rankings</div>
               <div style={{ display: 'flex', gap: 4 }}>
                 <button onClick={() => setRankMode('rate')} style={{
                   fontSize: 11, padding: '3px 8px', borderRadius: 20, cursor: 'pointer',
-                  border: '0.5px solid ' + (rankMode === 'rate' ? '#A32D2D' : 'var(--border)'),
-                  background: rankMode === 'rate' ? '#FCEBEB' : 'transparent',
-                  color: rankMode === 'rate' ? '#A32D2D' : 'var(--text-secondary)'
+                  border: '0.5px solid ' + (rankMode === 'rate' ? vars.red : 'var(--border)'),
+                  background: rankMode === 'rate' ? vars.redBg : 'transparent',
+                  color: rankMode === 'rate' ? vars.red : 'var(--text-secondary)',
+                  transition: 'var(--transition)'
                 }}>By rate</button>
                 <button onClick={() => setRankMode('count')} style={{
                   fontSize: 11, padding: '3px 8px', borderRadius: 20, cursor: 'pointer',
-                  border: '0.5px solid ' + (rankMode === 'count' ? '#534AB7' : 'var(--border)'),
-                  background: rankMode === 'count' ? '#EEEDFE' : 'transparent',
-                  color: rankMode === 'count' ? '#534AB7' : 'var(--text-secondary)'
+                  border: '0.5px solid ' + (rankMode === 'count' ? vars.purple : 'var(--border)'),
+                  background: rankMode === 'count' ? vars.purpleBg : 'transparent',
+                  color: rankMode === 'count' ? vars.purple : 'var(--text-secondary)',
+                  transition: 'var(--transition)'
                 }}>By count</button>
               </div>
             </div>
@@ -132,7 +148,7 @@ export default function Overview() {
                   <div style={{ width: 88, fontSize: 11, color: 'var(--text-secondary)', flexShrink: 0,
                     whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{s.state}</div>
                   <div style={{ flex: 1, height: 7, background: 'var(--bg-tertiary)', borderRadius: 4, overflow: 'hidden' }}>
-                    <div style={{ width: w + '%', height: '100%', background: rankMode === 'rate' ? '#A32D2D' : '#534AB7', borderRadius: 4, transition: 'width 0.3s ease' }} />
+                    <div style={{ width: w + '%', height: '100%', background: rankMode === 'rate' ? vars.red : vars.purple, borderRadius: 4, transition: 'width 0.3s ease' }} />
                   </div>
                   <div style={{ width: 46, fontSize: 10, color: 'var(--text-secondary)', textAlign: 'right', flexShrink: 0 }}>
                     {rankMode === 'rate' ? val.toFixed(1) : Math.round(val/1000) + 'k'}
@@ -142,24 +158,40 @@ export default function Overview() {
             })}
           </div>
 
-          <div style={{
-            background: '#FCEBEB', border: '0.5px solid rgba(0,0,0,0.12)',
-            borderRadius: 'var(--radius-lg)', padding: '14px 16px',
-            borderLeft: '3px solid #A32D2D'
-          }}>
-            <div style={{ fontSize: 11, fontWeight: 500, color: '#A32D2D', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Key insight</div>
-            <div style={{ fontSize: 12, color: '#1a1a1a', lineHeight: 1.6 }}>
+          <div
+            onMouseEnter={() => setHover('insight')}
+            onMouseLeave={() => setHover(null)}
+            style={{
+              background: vars.redBg, border: '0.5px solid var(--border)',
+              borderRadius: 'var(--radius-lg)', padding: '14px 16px',
+              borderLeft: '3px solid ' + vars.red,
+              transition: 'var(--transition)',
+              cursor: 'pointer',
+              transform: hover === 'insight' ? 'translateY(-1px)' : 'translateY(0)',
+              boxShadow: hover === 'insight' ? 'var(--shadow-md)' : 'var(--shadow-sm)'
+            }}
+          >
+            <div style={{ fontSize: 11, fontWeight: 500, color: vars.red, marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Key insight</div>
+            <div style={{ fontSize: 12, color: 'var(--text)', lineHeight: 1.6 }}>
               Delhi ranks #1 by crime rate (155 per 100k) but outside top 10 by absolute count. UP ranks #1 by count but not by rate. Two different policy problems.
             </div>
           </div>
 
-          <div style={{
-            background: '#EAF3DE', border: '0.5px solid rgba(0,0,0,0.12)',
-            borderRadius: 'var(--radius-lg)', padding: '14px 16px',
-            borderLeft: '3px solid #3B6D11'
-          }}>
-            <div style={{ fontSize: 11, fontWeight: 500, color: '#3B6D11', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Structural lever</div>
-            <div style={{ fontSize: 12, color: '#1a1a1a', lineHeight: 1.6 }}>
+          <div
+            onMouseEnter={() => setHover('lever')}
+            onMouseLeave={() => setHover(null)}
+            style={{
+              background: vars.greenBg, border: '0.5px solid var(--border)',
+              borderRadius: 'var(--radius-lg)', padding: '14px 16px',
+              borderLeft: '3px solid ' + vars.green,
+              transition: 'var(--transition)',
+              cursor: 'pointer',
+              transform: hover === 'lever' ? 'translateY(-1px)' : 'translateY(0)',
+              boxShadow: hover === 'lever' ? 'var(--shadow-md)' : 'var(--shadow-sm)'
+            }}
+          >
+            <div style={{ fontSize: 11, fontWeight: 500, color: vars.green, marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Structural lever</div>
+            <div style={{ fontSize: 12, color: 'var(--text)', lineHeight: 1.6 }}>
               Reducing early marriage predicts lower crime rate (p = 0.022). Strongest policy lever identified.
             </div>
           </div>

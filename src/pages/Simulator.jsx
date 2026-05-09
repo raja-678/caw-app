@@ -29,16 +29,16 @@ const baselineCrime = predict(
 )
 
 const scenarios = [
-  { label: 'Kerala model', desc: 'High literacy, low early marriage', policies: 3, literacy: 92, earlyMarriage: 1.4, infantMortality: 12, color: '#3B6D11', bg: '#EAF3DE' },
-  { label: 'National average', desc: 'Current average across 22 states', policies: 2.44, literacy: 68.4, earlyMarriage: 2.8, infantMortality: 36.2, color: '#534AB7', bg: '#EEEDFE' },
-  { label: 'UP model', desc: 'Low literacy, high early marriage', policies: 3, literacy: 59, earlyMarriage: 3.8, infantMortality: 49, color: '#A32D2D', bg: '#FCEBEB' },
+  { label: 'Kerala model', desc: 'High literacy, low early marriage', policies: 3, literacy: 92, earlyMarriage: 1.4, infantMortality: 12, color: 'var(--green-600)', bg: 'var(--green-50)' },
+  { label: 'National average', desc: 'Current average across 22 states', policies: 2.44, literacy: 68.4, earlyMarriage: 2.8, infantMortality: 36.2, color: 'var(--purple-600)', bg: 'var(--purple-50)' },
+  { label: 'UP model', desc: 'Low literacy, high early marriage', policies: 3, literacy: 59, earlyMarriage: 3.8, infantMortality: 49, color: 'var(--red-600)', bg: 'var(--red-50)' },
 ]
 
 const drivers = [
-  { key: 'early_marriage', label: 'Early marriage', coef: -0.0398, color: '#3B6D11' },
-  { key: 'infant_mortality', label: 'Infant mortality', coef: 0.0042, color: '#E24B4A' },
-  { key: 'literacy', label: 'Female literacy', coef: 0.0175, color: '#854F0B' },
-  { key: 'policies', label: 'Policy count', coef: 0.9553, color: '#534AB7' },
+  { key: 'early_marriage', label: 'Early marriage', coef: -0.0398, color: 'var(--green-600)' },
+  { key: 'infant_mortality', label: 'Infant mortality', coef: 0.0042, color: 'var(--red-400)' },
+  { key: 'literacy', label: 'Female literacy', coef: 0.0175, color: 'var(--amber-600)' },
+  { key: 'policies', label: 'Policy count', coef: 0.9553, color: 'var(--purple-600)' },
 ]
 
 export default function Simulator() {
@@ -46,6 +46,7 @@ export default function Simulator() {
   const [literacy, setLiteracy] = useState(nationalAvg.literacy)
   const [earlyMarriage, setEarlyMarriage] = useState(nationalAvg.early_marriage)
   const [infantMortality, setInfantMortality] = useState(nationalAvg.infant_mortality)
+  const [hover, setHover] = useState(null)
 
   const predicted = predict(policies, literacy, earlyMarriage, infantMortality)
   const delta = predicted - baselineCrime
@@ -53,10 +54,10 @@ export default function Simulator() {
   const isUp = delta > 0
 
   const chartData = [
-    { name: 'Your scenario', crime: predicted, fill: isUp ? '#A32D2D' : '#3B6D11' },
-    { name: 'National avg', crime: baselineCrime, fill: '#534AB7' },
-    { name: 'Kerala model', crime: predict(3, 92, 1.4, 12), fill: '#3B6D11' },
-    { name: 'UP model', crime: predict(3, 59, 3.8, 49), fill: '#E24B4A' },
+    { name: 'Your scenario', crime: predicted, fill: isUp ? 'var(--red-600)' : 'var(--green-600)' },
+    { name: 'National avg', crime: baselineCrime, fill: 'var(--purple-600)' },
+    { name: 'Kerala model', crime: predict(3, 92, 1.4, 12), fill: 'var(--green-600)' },
+    { name: 'UP model', crime: predict(3, 59, 3.8, 49), fill: 'var(--red-400)' },
   ]
 
   const sliders = [
@@ -78,13 +79,22 @@ export default function Simulator() {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginBottom: 20 }}>
         {scenarios.map(s => (
-          <div key={s.label} onClick={() => {
-            setPolicies(s.policies); setLiteracy(s.literacy)
-            setEarlyMarriage(s.earlyMarriage); setInfantMortality(s.infantMortality)
-          }} style={{
-            background: s.bg, border: '0.5px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '14px 16px', cursor: 'pointer'
-          }}>
+          <div
+            key={s.label}
+            onClick={() => {
+              setPolicies(s.policies); setLiteracy(s.literacy)
+              setEarlyMarriage(s.earlyMarriage); setInfantMortality(s.infantMortality)
+            }}
+            onMouseEnter={() => setHover(s.label)}
+            onMouseLeave={() => setHover(null)}
+            style={{
+              background: s.bg, border: '0.5px solid var(--border)',
+              borderRadius: 'var(--radius-lg)', padding: '14px 16px', cursor: 'pointer',
+              boxShadow: hover === s.label ? 'var(--shadow-md)' : 'var(--shadow-sm)',
+              transform: hover === s.label ? 'translateY(-1px)' : 'translateY(0)',
+              transition: 'var(--transition)'
+            }}
+          >
             <div style={{ fontSize: 12, fontWeight: 500, color: s.color, marginBottom: 3 }}>{s.label}</div>
             <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 6 }}>{s.desc}</div>
             <div style={{ fontSize: 13, fontWeight: 500, color: s.color }}>
@@ -97,7 +107,8 @@ export default function Simulator() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '22px 24px'
+          borderRadius: 'var(--radius-lg)', padding: '22px 24px',
+          boxShadow: 'var(--shadow-sm)'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
             <div style={{ fontSize: 13, fontWeight: 500 }}>Adjust variables</div>
@@ -108,6 +119,7 @@ export default function Simulator() {
               fontSize: 12, padding: '5px 12px', borderRadius: 'var(--radius-md)',
               border: '0.5px solid var(--border-strong)', background: 'transparent',
               color: 'var(--text-secondary)', cursor: 'pointer'
+              , transition: 'var(--transition)'
             }}>Reset</button>
           </div>
 
@@ -134,6 +146,7 @@ export default function Simulator() {
             background: 'var(--bg)', border: '0.5px solid var(--border)',
             borderRadius: 'var(--radius-lg)', padding: '22px',
             textAlign: 'center', flex: '0 0 auto'
+            , boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 6 }}>
               Predicted annual crime count
@@ -144,8 +157,8 @@ export default function Simulator() {
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: 6,
               padding: '4px 14px', borderRadius: 20,
-              background: isUp ? '#FCEBEB' : '#EAF3DE',
-              color: isUp ? '#A32D2D' : '#3B6D11',
+              background: isUp ? 'var(--red-50)' : 'var(--green-50)',
+              color: isUp ? 'var(--red-600)' : 'var(--green-600)',
               fontSize: 13, fontWeight: 500
             }}>
               {isUp ? '▲' : '▼'} {Math.abs(pct)}% {isUp ? 'above' : 'below'} national baseline
@@ -157,7 +170,8 @@ export default function Simulator() {
 
           <div style={{
             background: 'var(--bg)', border: '0.5px solid var(--border)',
-            borderRadius: 'var(--radius-lg)', padding: '18px 20px', flex: 1
+            borderRadius: 'var(--radius-lg)', padding: '18px 20px', flex: 1,
+            boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 12 }}>Scenario comparison</div>
             <ResponsiveContainer width="100%" height={160}>
@@ -166,7 +180,7 @@ export default function Simulator() {
                 <XAxis dataKey="name" tick={{ fontSize: 10, fill: 'var(--text-secondary)' }} />
                 <YAxis tickFormatter={v => (v/1000).toFixed(0)+'k'} tick={{ fontSize: 10, fill: 'var(--text-secondary)' }} />
                 <Tooltip formatter={(v) => [Math.round(v).toLocaleString(), 'Crime']}
-                  contentStyle={{ background: 'var(--bg)', border: '0.5px solid var(--border)', borderRadius: 8, fontSize: 12 }} />
+                  contentStyle={{ background: 'var(--bg)', border: '0.5px solid var(--border)', borderRadius: 'var(--radius-md)', fontSize: 12, color: 'var(--text)', boxShadow: 'var(--shadow-md)' }} />
                 <Bar dataKey="crime" radius={[4,4,0,0]}>
                   {chartData.map((entry, i) => (
                     <rect key={i} fill={entry.fill} />

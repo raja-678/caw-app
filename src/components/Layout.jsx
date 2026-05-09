@@ -14,6 +14,7 @@ const nav = [
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false)
   const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark')
+  const [hovered, setHovered] = useState(null)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
@@ -30,31 +31,45 @@ export default function Layout({ children }) {
       <aside
         className={'sidebar' + (open ? ' open' : '')}
         style={{
-          width: 220, background: 'var(--bg)',
+          width: 232, background: 'var(--bg)',
           borderRight: '0.5px solid var(--border)',
           padding: '24px 12px', display: 'flex',
-          flexDirection: 'column', gap: 4
+          flexDirection: 'column', gap: 4,
+          boxShadow: 'var(--shadow-sm)'
         }}
       >
-        <div style={{ padding: '0 12px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ height: 3, background: 'linear-gradient(90deg, var(--purple-600), var(--red-600))' }} />
+
+        <div style={{ padding: '14px 12px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
-            <div style={{ fontSize: 15, fontWeight: 500 }}>CAW India</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <div style={{ width: 8, height: 8, borderRadius: 999, background: 'var(--purple-600)', boxShadow: 'var(--shadow-sm)' }} />
+              <div style={{ fontSize: 15, fontWeight: 600 }}>CAW India</div>
+            </div>
             <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 2 }}>Policy & Crime Research</div>
           </div>
           <button className="close-btn" onClick={() => setOpen(false)}
-            style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', padding: 4, cursor: 'pointer' }}>
+            style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', padding: 4, cursor: 'pointer', transition: 'var(--transition)' }}>
             <X size={18} />
           </button>
         </div>
 
+        <div style={{ padding: '0 12px 6px', fontSize: 11, color: 'var(--text-tertiary)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+          Sections
+        </div>
+
         {nav.map(({ to, icon: Icon, label }) => (
           <NavLink key={to} to={to} end={to === '/'} onClick={() => setOpen(false)}
+            onMouseEnter={() => setHovered(to)}
+            onMouseLeave={() => setHovered(null)}
             style={({ isActive }) => ({
               display: 'flex', alignItems: 'center', gap: 10, padding: '9px 12px',
               borderRadius: 'var(--radius-md)', fontSize: 13, fontWeight: 500,
               color: isActive ? 'var(--purple-600)' : 'var(--text-secondary)',
-              background: isActive ? 'var(--purple-50)' : 'transparent',
-              transition: 'all 0.15s'
+              background: isActive
+                ? 'var(--purple-50)'
+                : (hovered === to ? (dark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.04)') : 'transparent'),
+              transition: 'var(--transition)'
             })}>
             <Icon size={16} />
             {label}
@@ -69,7 +84,8 @@ export default function Layout({ children }) {
               padding: '8px 12px', borderRadius: 'var(--radius-md)',
               border: '0.5px solid var(--border)', background: 'transparent',
               color: 'var(--text-secondary)', fontSize: 13, cursor: 'pointer',
-              marginBottom: 12
+              marginBottom: 12,
+              transition: 'var(--transition)'
             }}
           >
             {dark ? <Sun size={14} /> : <Moon size={14} />}
@@ -90,13 +106,13 @@ export default function Layout({ children }) {
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
             <button onClick={() => setOpen(true)}
-              style={{ background: 'none', border: 'none', color: 'var(--text)', padding: 4, cursor: 'pointer', display: 'flex' }}>
+              style={{ background: 'none', border: 'none', color: 'var(--text)', padding: 4, cursor: 'pointer', display: 'flex', transition: 'var(--transition)' }}>
               <Menu size={20} />
             </button>
             <div style={{ fontSize: 14, fontWeight: 500 }}>CAW India</div>
           </div>
           <button onClick={() => setDark(d => !d)}
-            style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', padding: 4, cursor: 'pointer', display: 'flex' }}>
+            style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', padding: 4, cursor: 'pointer', display: 'flex', transition: 'var(--transition)' }}>
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
         </header>

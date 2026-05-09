@@ -6,10 +6,10 @@ import data from '../data/caw_data.json'
 const states = [...data.state_averages].sort((a, b) => a.state.localeCompare(b.state))
 
 const getRisk = (crime) => {
-  if (crime > 40000) return { label: 'Very high risk', color: '#A32D2D', bg: '#FCEBEB' }
-  if (crime > 15000) return { label: 'High risk', color: '#E24B4A', bg: '#FCEBEB' }
-  if (crime > 5000) return { label: 'Moderate risk', color: '#854F0B', bg: '#FAEEDA' }
-  return { label: 'Low risk', color: '#3B6D11', bg: '#EAF3DE' }
+  if (crime > 40000) return { label: 'Very high risk', color: 'var(--red-600)', bg: 'var(--red-50)' }
+  if (crime > 15000) return { label: 'High risk', color: 'var(--red-400)', bg: 'var(--red-50)' }
+  if (crime > 5000) return { label: 'Moderate risk', color: 'var(--amber-600)', bg: 'var(--amber-50)' }
+  return { label: 'Low risk', color: 'var(--green-600)', bg: 'var(--green-50)' }
 }
 
 const nationalAvg = {
@@ -24,10 +24,10 @@ function StatCard({ label, value, national, unit = '', higherIsBad = true }) {
   const n = parseFloat(national)
   const worse = higherIsBad ? v > n : v < n
   return (
-    <div style={{ background: 'var(--bg-secondary)', borderRadius: 'var(--radius-md)', padding: '14px 16px' }}>
+    <div style={{ background: 'var(--bg-secondary)', borderRadius: 'var(--radius-md)', padding: '14px 16px', boxShadow: 'var(--shadow-sm)' }}>
       <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginBottom: 4 }}>{label}</div>
       <div style={{ fontSize: 20, fontWeight: 500, color: 'var(--text)' }}>{value}{unit}</div>
-      <div style={{ fontSize: 11, marginTop: 4, color: worse ? '#A32D2D' : '#3B6D11' }}>
+      <div style={{ fontSize: 11, marginTop: 4, color: worse ? 'var(--red-600)' : 'var(--green-600)' }}>
         {worse ? '▲' : '▼'} National avg: {national}{unit}
       </div>
     </div>
@@ -40,10 +40,11 @@ const CustomTooltip = ({ active, payload, label }) => {
       <div style={{
         background: 'var(--bg)', border: '0.5px solid var(--border)',
         borderRadius: 'var(--radius-md)', padding: '10px 14px',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
+        boxShadow: 'var(--shadow-md)',
+        color: 'var(--text)'
       }}>
         <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 4 }}>{label}</div>
-        <div style={{ fontSize: 13, color: '#A32D2D' }}>
+        <div style={{ fontSize: 13, color: 'var(--red-600)' }}>
           {Math.round(payload[0].value).toLocaleString()} cases
         </div>
         {payload[1] && (
@@ -95,7 +96,8 @@ export default function StateDive() {
 
       <div style={{
         background: 'var(--bg)', border: '0.5px solid var(--border)',
-        borderRadius: 'var(--radius-lg)', padding: '20px 24px', marginBottom: 16
+        borderRadius: 'var(--radius-lg)', padding: '20px 24px', marginBottom: 16,
+        boxShadow: 'var(--shadow-sm)'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
           <div>
@@ -132,7 +134,8 @@ export default function StateDive() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '20px 22px'
+          borderRadius: 'var(--radius-lg)', padding: '20px 22px',
+          boxShadow: 'var(--shadow-sm)'
         }}>
           <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 6 }}>Crime trend 2014-2022</div>
           <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginBottom: 16 }}>
@@ -145,15 +148,16 @@ export default function StateDive() {
               <YAxis tick={{ fontSize: 11, fill: 'var(--text-secondary)' }}
                 tickFormatter={v => (v / 1000).toFixed(0) + 'k'} />
               <Tooltip content={<CustomTooltip />} />
-              <Line type="monotone" dataKey="crime" stroke="#A32D2D" strokeWidth={2.5}
-                dot={{ fill: '#A32D2D', r: 4 }} activeDot={{ r: 6 }} />
+              <Line type="monotone" dataKey="crime" stroke="var(--red-600)" strokeWidth={2.5}
+                dot={{ fill: 'var(--red-600)', r: 4 }} activeDot={{ r: 6 }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
 
         <div style={{
           background: 'var(--bg)', border: '0.5px solid var(--border)',
-          borderRadius: 'var(--radius-lg)', padding: '20px 22px'
+          borderRadius: 'var(--radius-lg)', padding: '20px 22px',
+          boxShadow: 'var(--shadow-sm)'
         }}>
           <div style={{ fontSize: 13, fontWeight: 500, marginBottom: 6 }}>
             Socioeconomic profile vs national average
@@ -179,13 +183,13 @@ export default function StateDive() {
                   width: Math.min((item.val / item.max * 100), 100) + '%',
                   height: '100%', borderRadius: 5,
                   background: item.bad
-                    ? (item.val > item.nat ? '#A32D2D' : '#3B6D11')
-                    : (item.val > item.nat ? '#3B6D11' : '#A32D2D'),
+                    ? (item.val > item.nat ? 'var(--red-600)' : 'var(--green-600)')
+                    : (item.val > item.nat ? 'var(--green-600)' : 'var(--red-600)'),
                   transition: 'width 0.4s ease'
                 }} />
                 <div style={{
                   position: 'absolute', top: -3, left: Math.min((item.nat / item.max * 100), 100) + '%',
-                  width: 2, height: 16, background: '#534AB7', borderRadius: 1
+                  width: 2, height: 16, background: 'var(--purple-600)', borderRadius: 1
                 }} />
               </div>
             </div>

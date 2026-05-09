@@ -7,13 +7,13 @@ const years = ['All', ...[...new Set(policies.map(p => p.year))].sort()]
 const types = ['All', ...new Set(policies.map(p => p.type))]
 
 const categoryColors = {
-  'A. Legal and Regulatory Framework': { color: '#A32D2D', bg: '#FCEBEB' },
-  'B. Schemes and Programs': { color: '#185FA5', bg: '#E6F1FB' },
-  'C. Institutional and Policy Reforms': { color: '#534AB7', bg: '#EEEDFE' },
+  'A. Legal and Regulatory Framework': { color: 'var(--red-600)', bg: 'var(--red-50)' },
+  'B. Schemes and Programs': { color: 'var(--blue-600)', bg: 'var(--blue-50)' },
+  'C. Institutional and Policy Reforms': { color: 'var(--purple-600)', bg: 'var(--purple-50)' },
 }
 
 function getCat(cat) {
-  return categoryColors[cat] || { color: '#854F0B', bg: '#FAEEDA' }
+  return categoryColors[cat] || { color: 'var(--amber-600)', bg: 'var(--amber-50)' }
 }
 
 export default function PolicyExplorer() {
@@ -22,6 +22,7 @@ export default function PolicyExplorer() {
   const [year, setYear] = useState('All')
   const [type, setType] = useState('All')
   const [selected, setSelected] = useState(null)
+  const [hover, setHover] = useState(null)
 
   const filtered = useMemo(() => policies.filter(p => {
     const matchSearch = p.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -62,14 +63,22 @@ export default function PolicyExplorer() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginBottom: 20 }}>
         {Object.entries(byCat).map(([cat, count]) => {
           const c = getCat(cat)
+          const isActive = category === cat
           return (
-            <div key={cat} onClick={() => setCategory(category === cat ? 'All' : cat)}
+            <div
+              key={cat}
+              onClick={() => setCategory(isActive ? 'All' : cat)}
+              onMouseEnter={() => setHover(cat)}
+              onMouseLeave={() => setHover(null)}
               style={{
-                background: category === cat ? c.bg : 'var(--bg)',
-                border: '0.5px solid ' + (category === cat ? c.color : 'var(--border)'),
+                background: isActive ? c.bg : 'var(--bg)',
+                border: '0.5px solid ' + (isActive ? c.color : 'var(--border)'),
                 borderRadius: 'var(--radius-lg)', padding: '14px 16px', cursor: 'pointer',
-                transition: 'all 0.15s'
-              }}>
+                transition: 'var(--transition)',
+                boxShadow: hover === cat ? 'var(--shadow-md)' : 'var(--shadow-sm)',
+                transform: hover === cat ? 'translateY(-1px)' : 'translateY(0)',
+              }}
+            >
               <div style={{ fontSize: 22, fontWeight: 500, color: c.color }}>{count}</div>
               <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 2, lineHeight: 1.4 }}>
                 {cat.replace(/^[A-C]\. /, '')}
@@ -112,20 +121,29 @@ export default function PolicyExplorer() {
             <div style={{
               background: 'var(--bg)', border: '0.5px solid var(--border)',
               borderRadius: 'var(--radius-lg)', padding: '32px', textAlign: 'center',
-              color: 'var(--text-secondary)', fontSize: 13
+              color: 'var(--text-secondary)', fontSize: 13,
+              boxShadow: 'var(--shadow-sm)'
             }}>No policies match your filters</div>
           )}
           {filtered.map((p, i) => {
             const c = getCat(p.category)
             const isSelected = selected === p
+            const cardKey = 'policy:' + i
             return (
-              <div key={i} onClick={() => setSelected(isSelected ? null : p)}
+              <div
+                key={i}
+                onClick={() => setSelected(isSelected ? null : p)}
+                onMouseEnter={() => setHover(cardKey)}
+                onMouseLeave={() => setHover(null)}
                 style={{
                   background: isSelected ? c.bg : 'var(--bg)',
                   border: '0.5px solid ' + (isSelected ? c.color : 'var(--border)'),
                   borderRadius: 'var(--radius-lg)', padding: '14px 16px',
-                  cursor: 'pointer', transition: 'all 0.15s'
-                }}>
+                  cursor: 'pointer', transition: 'var(--transition)',
+                  boxShadow: hover === cardKey ? 'var(--shadow-md)' : 'var(--shadow-sm)',
+                  transform: hover === cardKey ? 'translateY(-1px)' : 'translateY(0)',
+                }}
+              >
                 <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12 }}>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: 13, fontWeight: 500, color: 'var(--text)', marginBottom: 5, lineHeight: 1.4 }}>
@@ -156,6 +174,7 @@ export default function PolicyExplorer() {
             background: 'var(--bg)', border: '0.5px solid var(--border)',
             borderRadius: 'var(--radius-lg)', padding: '20px 22px',
             position: 'sticky', top: 0, alignSelf: 'start', maxHeight: '80vh', overflowY: 'auto'
+            , boxShadow: 'var(--shadow-sm)'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
               <div style={{ fontSize: 13, fontWeight: 500, flex: 1, lineHeight: 1.4, paddingRight: 12 }}>
