@@ -73,7 +73,7 @@ export default function Simulator() {
       <div style={{ marginBottom: 24 }}>
         <h1 style={{ fontSize: 24, fontWeight: 500, marginBottom: 4 }}>Policy Simulator</h1>
         <p style={{ fontSize: 14, color: 'var(--text-secondary)' }}>
-          Adjust structural indicators to predict crime outcomes — powered by fixed-effects regression (R² = 0.983)
+          Adjust structural indicators to predict crime outcomes — powered by fixed-effects regression (R² = 0.949)
         </p>
       </div>
 
@@ -162,7 +162,7 @@ export default function Simulator() {
               {isUp ? '▲' : '▼'} {Math.abs(pct)}% {isUp ? 'above' : 'below'} national baseline
             </div>
             <div style={{ fontSize: 11, color: 'var(--text-secondary)', marginTop: 10, lineHeight: 1.6 }}>
-              Based on regression coefficients · R² = 0.983
+              Based on regression coefficients · R² = 0.949
             </div>
           </div>
 

@@ -189,7 +189,7 @@ export default function Overview() {
           >
             <div style={{ fontSize: 11, fontWeight: 500, color: vars.green, marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Structural lever</div>
             <div style={{ fontSize: 12, color: 'var(--text)', lineHeight: 1.6 }}>
-              Reducing early marriage predicts lower crime rate (p = 0.022). Strongest policy lever identified.
+              Reducing early marriage predicts lower crime rate (p = 0.016). Strongest policy lever identified.
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import StateDive from './pages/StateDive'
 import PolicyExplorer from './pages/PolicyExplorer'
 import Findings from './pages/Findings'
 import Simulator from './pages/Simulator'
+import SafetyNavigator from './pages/SafetyNavigator'
 
 export default function App() {
   const location = useLocation()
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/policies" element={<PolicyExplorer />} />
           <Route path="/findings" element={<Findings />} />
           <Route path="/simulator" element={<Simulator />} />
+          <Route path="/safety" element={<SafetyNavigator />} />
         </Routes>
       </AnimatePresence>
     </Layout>

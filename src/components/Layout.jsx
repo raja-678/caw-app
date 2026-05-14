@@ -1,6 +1,6 @@
 ﻿import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Map, BarChart2, FileText, TrendingUp, Sliders, Menu, X, Moon, Sun } from 'lucide-react'
+import { Map, BarChart2, FileText, TrendingUp, Sliders, Menu, X, Moon, Sun, Shield } from 'lucide-react'
 import '../styles/layout.css'
 
 const nav = [
@@ -9,6 +9,7 @@ const nav = [
   { to: '/policies', icon: FileText, label: 'Policy Explorer' },
   { to: '/findings', icon: TrendingUp, label: 'Findings' },
   { to: '/simulator', icon: Sliders, label: 'Simulator' },
+  { to: '/safety', icon: Shield, label: 'Safety Navigator' },
 ]
 
 export default function Layout({ children }) {
