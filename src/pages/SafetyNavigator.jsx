@@ -36,24 +36,36 @@ function RiskMeter({ score }) {
 }
 
 async function fetchCrimeNews(city) {
-  try {
-    const query = encodeURIComponent('crime women ' + city + ' India')
-    const rssUrl = 'https://news.google.com/rss/search?q=' + query + '&hl=en-IN&gl=IN&ceid=IN:en'
-    const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(rssUrl)
-    const res = await fetch(proxyUrl)
-    const text = await res.text()
-    const parser = new DOMParser()
-    const xml = parser.parseFromString(text, 'text/xml')
-    const items = Array.from(xml.querySelectorAll('item')).slice(0, 8)
-    return items.map(item => ({
-      title: item.querySelector('title') ? item.querySelector('title').textContent : '',
-      link: item.querySelector('link') ? item.querySelector('link').textContent : '#',
-      date: item.querySelector('pubDate') ? new Date(item.querySelector('pubDate').textContent).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '',
-      source: item.querySelector('source') ? item.querySelector('source').textContent : 'Google News'
-    })).filter(item => item.title)
-  } catch (e) {
-    return []
+  const proxies = [
+    'https://api.allorigins.win/raw?url=',
+    'https://corsproxy.io/?',
+    'https://proxy.cors.sh/',
+  ]
+  const query = encodeURIComponent('crime women ' + city + ' India')
+  const rssUrl = 'https://news.google.com/rss/search?q=' + query + '&hl=en-IN&gl=IN&ceid=IN:en'
+
+  for (const proxy of proxies) {
+    try {
+      const url = proxy + encodeURIComponent(rssUrl)
+      const res = await fetch(url, { headers: { 'x-requested-with': 'XMLHttpRequest' } })
+      if (!res.ok) continue
+      const text = await res.text()
+      if (!text || text.length < 100) continue
+      const parser = new DOMParser()
+      const xml = parser.parseFromString(text, 'text/xml')
+      const items = Array.from(xml.querySelectorAll('item')).slice(0, 8)
+      const results = items.map(item => ({
+        title: item.querySelector('title') ? item.querySelector('title').textContent.replace('<![CDATA[', '').replace(']]>', '').trim() : '',
+        link: item.querySelector('link') ? item.querySelector('link').textContent.trim() : '#',
+        date: item.querySelector('pubDate') ? new Date(item.querySelector('pubDate').textContent).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '',
+        source: item.querySelector('source') ? item.querySelector('source').textContent : 'Google News'
+      })).filter(item => item.title && item.title.length > 5)
+      if (results.length > 0) return results
+    } catch (e) {
+      continue
+    }
   }
+  return []
 }
 
 
